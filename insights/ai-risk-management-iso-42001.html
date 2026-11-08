@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Risk Management Under ISO 42001: What the Standard Actually Requires | MeasurementPros</title>
+<meta name="description" content="ISO/IEC 42001's risk management requirements go beyond listing risks. Here's what the standard actually asks for — and where most organizations fall short in the gap assessment.">
+<link rel="canonical" href="https://measurementpros.io/insights/ai-risk-management-iso-42001.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root {
+  --navy: #1a2540;
+  --orange: #c84b1e;
+  --orange-light: #d85c2c;
+  --bg: #fafaf8;
+  --surface: #ffffff;
+  --rule: #dddcd9;
+  --text: #3c485b;
+  --text-heading: #1a2540;
+  --muted: #505d70;
+  --light-bg: #f2efe9;
+  --tag-bg: #eef0f5;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --navy: #dde4f0; --orange: #e06535; --orange-light: #e87a4a;
+    --bg: #11141c; --surface: #1a1f2e; --rule: #2a3045;
+    --text: #b8c4d4; --text-heading: #dde4f0; --muted: #8090a8;
+    --light-bg: #161b28; --tag-bg: #1e2535;
+  }
+}
+:root[data-theme="dark"] {
+  --navy: #dde4f0; --orange: #e06535; --orange-light: #e87a4a;
+  --bg: #11141c; --surface: #1a1f2e; --rule: #2a3045;
+  --text: #b8c4d4; --text-heading: #dde4f0; --muted: #8090a8;
+  --light-bg: #161b28; --tag-bg: #1e2535;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 19px; }
+body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; }
+
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--navy); padding: 0 2rem;
+  display: flex; align-items: center; gap: 2rem; height: 64px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.nav-logo { font-size: 1.1rem; font-weight: 700; color: #fff; text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+.nav-logo span { color: var(--orange); }
+.nav-links { display: flex; align-items: center; gap: 0.15rem; list-style: none; margin-left: auto; }
+.nav-links a { font-size: 0.895rem; font-weight: 500; color: rgba(255,255,255,0.78); text-decoration: none; padding: 0.35rem 0.65rem; border-radius: 4px; transition: color 0.15s, background 0.15s; white-space: nowrap; }
+.nav-links a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+.nav-cta { background: var(--orange) !important; color: #fff !important; border-radius: 5px !important; padding: 0.4rem 0.9rem !important; }
+.nav-cta:hover { background: var(--orange-light) !important; }
+
+.article-wrap { max-width: 740px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+.breadcrumb { font-size: 0.78rem; color: var(--muted); margin-bottom: 2rem; }
+.breadcrumb a { color: var(--muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--orange); }
+.breadcrumb span { margin: 0 0.4rem; }
+
+.post-tag {
+  display: inline-block; font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.07em; text-transform: uppercase;
+  background: var(--tag-bg); color: var(--muted);
+  padding: 0.25rem 0.6rem; border-radius: 3px;
+  text-decoration: none; margin-bottom: 1rem;
+}
+.post-tag:hover { color: var(--orange); }
+
+h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 700; color: var(--text-heading); line-height: 1.2; margin-bottom: 1rem; }
+.post-meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--rule); }
+.post-meta strong { color: var(--text); }
+
+.article-body h2 { font-size: 1.25rem; font-weight: 700; color: var(--text-heading); margin: 2.5rem 0 0.75rem; line-height: 1.3; }
+.article-body p { margin-bottom: 1.25rem; line-height: 1.75; }
+.article-body ul { margin: 0 0 1.25rem 1.5rem; }
+.article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+.article-body strong { color: var(--text-heading); font-weight: 600; }
+
+.callout {
+  background: var(--light-bg); border-left: 3px solid var(--orange);
+  padding: 1.25rem 1.5rem; border-radius: 0 6px 6px 0;
+  margin: 2rem 0; font-size: 0.95rem; line-height: 1.7;
+}
+.callout strong { color: var(--text-heading); display: block; margin-bottom: 0.3rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+.post-footer {
+  margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid var(--rule);
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+}
+.post-footer a { color: var(--orange); text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+.post-footer a:hover { text-decoration: underline; }
+
+.related-cta {
+  background: var(--navy); border-radius: 8px; padding: 2rem;
+  margin-top: 3rem; color: rgba(255,255,255,0.8);
+}
+.related-cta h3 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
+.related-cta p { font-size: 0.88rem; line-height: 1.65; margin-bottom: 1rem; }
+.related-cta a { display: inline-block; background: var(--orange); color: #fff; font-size: 0.88rem; font-weight: 600; padding: 0.6rem 1.25rem; border-radius: 5px; text-decoration: none; }
+.related-cta a:hover { background: var(--orange-light); }
+
+footer { background: #0e1220; color: rgba(255,255,255,0.6); padding: 3rem 2rem 2rem; }
+.footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1.5fr; gap: 3rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.footer-brand-name { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
+.footer-brand-name span { color: var(--orange); }
+.footer-tagline { font-size: 0.8rem; color: rgba(255,255,255,0.45); line-height: 1.6; }
+.footer-col h4 { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 1rem; }
+.footer-col a { display: block; color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.85rem; margin-bottom: 0.5rem; }
+.footer-col a:hover { color: #fff; }
+.footer-address { font-size: 0.82rem; line-height: 1.7; color: rgba(255,255,255,0.5); }
+.footer-bottom { max-width: 1100px; margin: 1.5rem auto 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+.footer-bottom a { color: rgba(255,255,255,0.35); text-decoration: none; }
+
+@media (max-width: 768px) {
+  html { font-size: 17px; }
+  nav { padding: 0 1rem; }
+  .nav-links { display: none; }
+  .article-wrap { padding: 2.5rem 1.25rem 4rem; }
+  .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .post-footer { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">Measurement<span>P</span>ros</a>
+  <ul class="nav-links">
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../iso-42001.html">ISO/IEC 42001</a></li>
+    <li><a href="../eu-ai-act.html">EU AI Act</a></li>
+    <li><a href="../bias-audits.html">Bias Audits (NY 144/CA)</a></li>
+    <li><a href="../ivo-capability.html">IVO Capability</a></li>
+    <li><a href="../insights.html">Insights</a></li>
+    <li><a href="../contact.html" class="nav-cta">Let's Talk</a></li>
+  </ul>
+</nav>
+
+<div class="article-wrap">
+  <div class="breadcrumb">
+    <a href="../insights.html">Insights</a>
+    <span>›</span>
+    ISO 42001
+  </div>
+
+  <a href="../iso-42001.html" class="post-tag">ISO 42001</a>
+
+  <h1>AI Risk Management Under ISO 42001: What the Standard Actually Requires</h1>
+
+  <div class="post-meta">
+    By <strong>John Smutniak</strong> · September 18, 2026 · 7 min read
+  </div>
+
+  <div class="article-body">
+    <p>
+      Most organizations approaching ISO/IEC 42001 for the first time treat Clause 6 — the risk assessment and treatment requirements — as a documentation exercise. They produce a risk register, assign likelihood and impact scores, populate a treatment column, and consider the requirement satisfied. That is not what the standard asks for.
+    </p>
+
+    <p>
+      What 42001's risk management requirements actually ask for is harder to fake and more useful when done correctly: a structured process that connects identified risks to specific AI system behaviors, to the organization's stated objectives, and to controls that are measurably operating. The gap between "we have a risk register" and "we have a functioning AI risk management process" is where most implementations fall short — and where most gap assessments spend the bulk of their time.
+    </p>
+
+    <h2>The scope problem most organizations get wrong</h2>
+
+    <p>
+      ISO/IEC 42001 applies to the organization's AI management system — the defined scope of AI activities the organization has chosen to govern under the standard. Defining that scope sounds straightforward until you start working through it. Which AI systems are in scope? Which departments? Which use of AI by third parties on the organization's behalf?
+    </p>
+
+    <p>
+      The risk assessment must address risks within the defined scope. But the scope definition and the risk assessment are mutually dependent: a scope defined too narrowly excludes risks the organization actually carries, and a scope defined without reference to risk exposure leaves the organization arguing about which systems to include long after the rest of the AIMS is built.
+    </p>
+
+    <p>
+      In practice, the more useful question to start with is: where in this organization could an AI system cause harm to an individual, fail to perform as intended, or create material compliance exposure? The answer to that question draws a more honest scope boundary than a policy document alone.
+    </p>
+
+    <h2>What Clause 6.1 actually requires</h2>
+
+    <p>
+      Clause 6.1 requires the organization to determine risks and opportunities relevant to the AIMS and to its ability to achieve its intended outcomes. The key phrase is "intended outcomes" — the standard is not asking for a generic risk inventory. It is asking the organization to articulate what it is trying to accomplish with its AI systems and then identify what could prevent that.
+    </p>
+
+    <p>
+      For a high-risk AI system under the EU AI Act, that might mean identifying risks to the accuracy and reliability of the system's outputs, risks to the rights of individuals affected by those outputs, and risks to the organization's ability to demonstrate conformity during an audit. Those are different risk categories, and the treatment actions for each look different.
+    </p>
+
+    <div class="callout">
+      <strong>What auditors look for</strong>
+      A risk register that lists "model bias" as a risk without connecting it to a specific system, a specific affected population, a treatment action with an owner, and a mechanism for monitoring whether the treatment is working — that register does not satisfy Clause 6.1. It documents awareness of a concept, not management of a risk.
+    </div>
+
+    <h2>Treatment plans that actually link to controls</h2>
+
+    <p>
+      Clause 6.1.3 requires the organization to determine appropriate risk treatment actions. Annex A of ISO/IEC 42001 provides a reference control set — 38 controls organized across seven domains — but Annex A is informative, not normative. The organization is not required to implement every control; it is required to justify its control selections relative to its risk treatment decisions.
+    </p>
+
+    <p>
+      That justification lives in the Statement of Applicability. A well-constructed SoA maps each identified risk to the treatment decision (accept, avoid, transfer, reduce), the control or controls selected to implement that decision, and the rationale for excluding controls the organization chose not to apply. In a gap assessment, we find roughly half of organizations have either no SoA or one that lists controls without connecting them to the risk register. The two documents exist independently rather than as parts of a single argument.
+    </p>
+
+    <h2>Monitoring and measurement — the requirement most implementations skip</h2>
+
+    <p>
+      Clause 9.1 requires the organization to monitor, measure, analyze and evaluate the AI management system. For risk management specifically, this means the organization needs a way to know whether its treatment actions are actually reducing risk — not just whether the actions have been taken.
+    </p>
+
+    <p>
+      A training data review policy can be "implemented" in the sense that a policy document exists. It is not "effective" until someone has reviewed training data according to that policy and the review produced a findable record. The difference between implementation and effectiveness is the difference between a paper AIMS and one that actually does what it claims.
+    </p>
+
+    <p>
+      The monitoring requirement is where AI risk management intersects with measurement in a way that most policy-driven implementations cannot satisfy. You need quantitative baselines, defined thresholds, and a schedule for review. Whether those baselines come from model performance metrics, audit findings, incident data, or bias testing outputs depends on the specific risk — but some form of measurement has to exist.
+    </p>
+
+    <h2>Where this leaves most organizations</h2>
+
+    <p>
+      The organizations that approach 42001 as a documentation exercise find their gap assessments revealing a large number of gaps, most of which require going back to rebuild the risk management process rather than add documentation to an existing one. The organizations that approach it as an operational question — what are we actually doing to manage AI risk, and how would we know if it stopped working — find the documentation easier to produce because it describes something that exists.
+    </p>
+
+    <p>
+      That is the harder starting point, but it is the one that results in a certification that means something. A certificate issued against a paper AIMS holds until the first surveillance audit.
+    </p>
+
+    <div class="related-cta">
+      <h3>ISO 42001 gap assessment</h3>
+      <p>If your organization is preparing for ISO/IEC 42001 certification or wants an honest read on where your current AI management system stands, a gap assessment against Clause 6 is usually the right place to start.</p>
+      <a href="../iso-42001.html">See our ISO 42001 services</a>
+    </div>
+  </div>
+
+  <div class="post-footer">
+    <a href="../insights.html">← Back to Insights</a>
+    <a href="../contact.html">Talk to us about ISO 42001 →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">Measurement<span>P</span>ros</div>
+      <p class="footer-tagline">ISO 42001 · EU AI Act · Bias Audits · IVO<br>Quantitative Language LLC</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="../iso-42001.html">ISO/IEC 42001</a>
+      <a href="../eu-ai-act.html">EU AI Act</a>
+      <a href="../bias-audits.html">Bias Audits (NY 144/CA)</a>
+      <a href="../ivo-capability.html">IVO Capability</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p class="footer-address">4576 Research Forest Dr Suite 200<br>The Woodlands TX 77381<br><br>600 Congress Ave · Austin TX 78701<br><br>Bratislava, Slovakia</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2020–2026 Quantitative Language LLC. The Woodlands · Austin · Bratislava. All rights reserved.</p>
+    <p><a href="../privacy-policy.html">Privacy Policy</a> · <a href="../terms.html">Terms</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

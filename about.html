@@ -1,0 +1,468 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About MeasurementPros</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+
+<style>
+:root {
+ --navy: #1a2540;
+ --orange: #c84b1e;
+ --orange-light: #d85c2c;
+ --bg: #fafaf8;
+ --surface: #ffffff;
+ --rule: #dddcd9;
+ --text: #3c485b;
+ --text-heading: #1a2540;
+ --muted: #6b7a90;
+ --light-bg: #f2efe9;
+}
+@media (prefers-color-scheme: dark) {
+:root:not([data-theme="light"]) {
+ --bg: #111827; --surface: #1e2a3a; --rule: #2d3a4e;
+ --text: #c8d0db; --text-heading: #f0ede8; --muted: #94a3b8;
+ --light-bg: #1a2435;
+ }
+}
+:root[data-theme="dark"] {
+ --bg: #111827; --surface: #1e2a3a; --rule: #2d3a4e;
+ --text: #c8d0db; --text-heading: #f0ede8; --muted: #94a3b8;
+ --light-bg: #1a2435;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+ font-family: 'Inter', system-ui, sans-serif;
+ background: var(--bg);
+ color: var(--text);
+ font-size: 19px;
+ line-height: 1.65;
+}
+
+/* NAV */
+nav {
+ position: sticky;
+ top: env(safe-area-inset-top, 0px);
+ z-index: 100;
+ background: var(--navy);
+ padding: 0 24px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ height: 62px;
+ gap: 16px;
+}
+.nav-logo {
+ font-weight: 800;
+ font-size: 17px;
+ color: #fff;
+ text-decoration: none;
+ letter-spacing: -0.01em;
+ white-space: nowrap;
+}
+.nav-logo span { color: var(--orange); }
+.nav-links {
+ list-style: none;
+ display: flex;
+ gap: 4px;
+ flex-wrap: wrap;
+ justify-content: flex-end;
+}
+.nav-links a {
+ color: rgba(255,255,255,0.75);
+ text-decoration: none;
+ font-size: 15px;
+ font-weight: 500;
+ padding: 6px 10px;
+ border-radius: 4px;
+ transition: color 0.15s, background 0.15s;
+}
+.nav-links a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+.nav-links a.active { color: #fff; }
+.nav-links a.nav-cta {
+ background: var(--orange);
+ color: #fff;
+ padding: 6px 14px;
+}
+.nav-links a.nav-cta:hover { background: var(--orange-light); }
+
+/* PAGE HEADER */
+.page-header {
+ background: var(--navy);
+ padding: 64px 24px 72px;
+}
+.page-header-inner {
+ max-width: 780px;
+ margin: 0 auto;
+}
+.page-eyebrow {
+ font-size: 12px;
+ font-weight: 700;
+ letter-spacing: 0.1em;
+ text-transform: uppercase;
+ color: var(--orange);
+ margin-bottom: 16px;
+}
+.page-header h1 {
+ font-size: clamp(28px, 4vw, 44px);
+ font-weight: 800;
+ color: #fff;
+ line-height: 1.15;
+ letter-spacing: -0.02em;
+ text-wrap: balance;
+ margin-bottom: 20px;
+}
+.page-header p {
+ font-size: 18px;
+ color: rgba(255,255,255,0.7);
+ max-width: 640px;
+ line-height: 1.65;
+}
+
+/* SECTIONS */
+.section {
+ max-width: 860px;
+ margin: 0 auto;
+ padding: 64px 24px;
+}
+.section +.section {
+ border-top: 1px solid var(--rule);
+}
+.section h2 {
+ font-size: clamp(22px, 3vw, 30px);
+ font-weight: 800;
+ color: var(--text-heading);
+ letter-spacing: -0.02em;
+ margin-bottom: 20px;
+ text-wrap: balance;
+}
+.section p {
+ color: var(--text);
+ margin-bottom: 16px;
+ max-width: 680px;
+}
+.section p:last-child { margin-bottom: 0; }
+
+/* TEAM GRID */
+.team-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+ gap: 32px;
+ margin-top: 40px;
+}
+.team-card {
+ background: var(--surface);
+ border: 1px solid var(--rule);
+ border-radius: 10px;
+ padding: 28px;
+}
+.team-card.principal {
+ border-color: var(--orange);
+ border-width: 2px;
+}
+.team-name {
+ font-size: 18px;
+ font-weight: 800;
+ color: var(--text-heading);
+ margin-bottom: 4px;
+}
+.team-role {
+ font-size: 13px;
+ font-weight: 600;
+ color: var(--orange);
+ text-transform: uppercase;
+ letter-spacing: 0.06em;
+ margin-bottom: 14px;
+}
+.team-bio {
+ font-size: 15px;
+ color: var(--text);
+ line-height: 1.6;
+}
+.team-location {
+ font-size: 12px;
+ color: var(--muted);
+ margin-top: 12px;
+ font-weight: 500;
+}
+
+/* CREDENTIALS BAR */
+.cred-bar {
+ background: var(--light-bg);
+ border-radius: 8px;
+ padding: 20px 24px;
+ margin-top: 48px;
+ display: flex;
+ flex-wrap: wrap;
+ gap: 10px;
+ align-items: center;
+}
+.cred-label {
+ font-size: 12px;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 0.08em;
+ color: var(--muted);
+ margin-right: 4px;
+}
+.cred-pill {
+ background: var(--surface);
+ border: 1px solid var(--rule);
+ border-radius: 20px;
+ padding: 4px 12px;
+ font-size: 12px;
+ font-weight: 600;
+ color: var(--text-heading);
+}
+
+/* OFFICES */
+.offices {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 24px;
+ margin-top: 32px;
+}
+.office {
+ background: var(--surface);
+ border: 1px solid var(--rule);
+ border-radius: 8px;
+ padding: 24px;
+}
+.office-city {
+ font-size: 16px;
+ font-weight: 800;
+ color: var(--text-heading);
+ margin-bottom: 6px;
+}
+.office-detail {
+ font-size: 14px;
+ color: var(--muted);
+ line-height: 1.6;
+}
+
+/* CTA */
+.cta-strip {
+ background: var(--navy);
+ padding: 56px 24px;
+ text-align: center;
+}
+.cta-strip h2 {
+ font-size: clamp(22px, 3vw, 30px);
+ font-weight: 800;
+ color: #fff;
+ margin-bottom: 12px;
+ text-wrap: balance;
+}
+.cta-strip p {
+ color: rgba(255,255,255,0.65);
+ font-size: 17px;
+ margin-bottom: 28px;
+}
+.btn-primary {
+ display: inline-block;
+ background: var(--orange);
+ color: #fff;
+ padding: 13px 30px;
+ border-radius: 6px;
+ font-weight: 700;
+ font-size: 15px;
+ text-decoration: none;
+ transition: background 0.15s;
+}
+.btn-primary:hover { background: var(--orange-light); }
+
+/* FOOTER */
+footer {
+ background: var(--navy);
+ padding: 40px 24px 24px;
+ color: rgba(255,255,255,0.5);
+ font-size: 13px;
+}
+.footer-inner {
+ max-width: 1100px;
+ margin: 0 auto 32px;
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ gap: 32px;
+}
+.footer-logo {
+ font-weight: 800;
+ font-size: 16px;
+ color: #fff;
+}
+.footer-logo span { color: var(--orange); }
+.footer-tagline {
+ display: block;
+ color: rgba(255,255,255,0.45);
+ font-size: 13px;
+ margin-top: 6px;
+}
+.footer-nav {
+ display: flex;
+ flex-direction: column;
+ gap: 8px;
+}
+.footer-nav a,.footer-contact a {
+ color: rgba(255,255,255,0.55);
+ text-decoration: none;
+ font-size: 13px;
+ transition: color 0.15s;
+}
+.footer-nav a:hover,.footer-contact a:hover { color: #fff; }
+.footer-contact {
+ display: flex;
+ flex-direction: column;
+ gap: 6px;
+}
+.footer-bar {
+ max-width: 1100px;
+ margin: 0 auto;
+ padding-top: 20px;
+ border-top: 1px solid rgba(255,255,255,0.1);
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ gap: 10px;
+}
+.footer-links { display: flex; gap: 16px; }
+.footer-links a {
+ color: rgba(255,255,255,0.45);
+ text-decoration: none;
+ font-size: 13px;
+}
+.footer-links a:hover { color: #fff; }
+
+@media (max-width: 640px) {
+.nav-links { display: none; }
+.team-grid { grid-template-columns: 1fr; }
+.offices { grid-template-columns: 1fr; }
+.footer-inner { grid-template-columns: 1fr; }
+}
+</style>
+
+<nav>
+ <a href="index.html" class="nav-logo">Measurement<span>P</span>ros</a>
+ <ul class="nav-links">
+ <li><a href="about.html" class="active">About</a></li>
+ <li><a href="iso-42001.html">ISO/IEC 42001</a></li>
+ <li><a href="eu-ai-act.html">EU AI Act</a></li>
+ <li><a href="bias-audits.html">Bias Audits (NY 144/CA)</a></li>
+ <li><a href="ivo-capability.html">IVO Capability</a></li>
+ <li><a href="insights.html">Insights</a></li>
+ <li><a href="contact.html" class="nav-cta">Let's Talk</a></li>
+ </ul>
+</nav>
+
+<div class="page-header">
+ <div class="page-header-inner">
+ <div class="page-eyebrow">Who we are</div>
+ <h1>A compliance practice built on measurement, not promises.</h1>
+ <p>MeasurementPros was founded more than a decade ago to address governance and management questions driven by complex data flows and emerging AI systems. The work has always been quantitative tracing claims to evidence, mapping controls to requirements, building programmes that hold up when scrutinised.</p>
+ </div>
+</div>
+
+<div class="section">
+ <h2>The firm</h2>
+ <p>MeasurementPros is a governance, risk, and compliance consultancy specialising in AI governance, data management, and cybersecurity regulation. We work with organisations across the United States and Europe from financial institutions navigating DORA to technology companies preparing for the EU AI Act to US defense contractors managing CMMC obligations.</p>
+ <p>Our practice is built around a simple conviction: compliance is an operational discipline, not a document exercise. A policy that describes the right process but has no connection to what actually happens in production is not compliance it is exposure. We build programmes that are measurable, auditable, and designed to withstand scrutiny from regulators, certification bodies, and counterparties alike.</p>
+ <p>We operate from Austin, Texas and Bratislava, Slovakia. The transatlantic reach is deliberate the regulatory landscape that matters most to our clients spans both sides of the Atlantic, and we have practitioners who work in it every day.</p>
+
+ <div class="offices">
+ <div class="office">
+ <div class="office-city">The Woodlands, Texas</div>
+ <div class="office-detail">American Headquarters<br>4576 Research Forest Dr<br>Suite 200<br>The Woodlands, TX 77381</div>
+ </div>
+ <div class="office">
+ <div class="office-city">Austin, Texas</div>
+ <div class="office-detail">600 Congress Ave<br>Austin, TX 78701</div>
+ </div>
+ <div class="office">
+ <div class="office-city">Bratislava, Slovakia</div>
+ <div class="office-detail">European Headquarters</div>
+ </div>
+ </div>
+</div>
+
+<div class="section">
+ <h2>The team</h2>
+ <p>When you engage MeasurementPros you work directly with the people who hold the credentials not a junior consultant supervised from a distance.</p>
+
+ <div class="team-grid">
+
+ <div class="team-card principal">
+ <div class="team-name">John Smutniak</div>
+ <div class="team-role">Managing Partner</div>
+ <div class="team-bio">John is an MIT graduate and former researcher at Harvard Business School. Before founding MeasurementPros, he reported for The Economist and held senior roles in finance and data strategy, where he built quantitative systems for risk management and large-scale data operations. He brings decades of experience applying rigorous measurement thinking to complex governance problems first in financial institutions, now in AI and data compliance.</div>
+ <div class="team-location">📍 Austin, Texas</div>
+ </div>
+
+ <div class="team-card">
+ <div class="team-name">Leah Kingsbury</div>
+ <div class="team-role">Client Success Manager</div>
+ <div class="team-bio">Leah manages client relationships and programme delivery from our Austin office. She keeps engagements on track, on time, and focused on outcomes that matter and is usually the first person a client talks to when something needs to move fast.</div>
+ <div class="team-location">📍 Austin, Texas</div>
+ </div>
+
+ <div class="team-card">
+ <div class="team-name">Scott Reid</div>
+ <div class="team-role">Analytics & Strategy</div>
+ <div class="team-bio">Scott translates measurement programmes into business terms connecting compliance and analytics work to commercial outcomes. He holds an MBA from Babson College and a BS from the University of New Hampshire, and has led strategy and analytics engagements across financial services, retail, and technology clients.</div>
+ <div class="team-location">📍 Austin, Texas</div>
+ </div>
+
+ <div class="team-card">
+ <div class="team-name">Mira Tekelova</div>
+ <div class="team-role">Analytics Client Manager</div>
+ <div class="team-bio">Mira leads delivery on our analytics engagements deep data analysis, complex account configuration, and keeping client programmes running cleanly. She is based in Bratislava and works across our European client base.</div>
+ <div class="team-location">📍 Bratislava, Slovakia</div>
+ </div>
+
+ <div class="team-card">
+ <div class="team-name">Michal Tekel</div>
+ <div class="team-role">Analytics Operations</div>
+ <div class="team-bio">Michal connects clients with timely, accurate data solutions. His expertise spans ecommerce and direct response data streams, and he handles the operational infrastructure that keeps measurement programmes functioning.</div>
+ <div class="team-location">📍 Bratislava, Slovakia</div>
+ </div>
+
+ </div>
+
+ <div class="cred-bar">
+ <span class="cred-label">Credentials</span>
+ <span class="cred-pill">Certified Lead Auditor ISO 42001</span>
+ <span class="cred-pill">Certified Lead Auditor ISO 27001</span>
+ <span class="cred-pill">Certified Lead Auditor ISO 27701</span>
+ </div>
+</div>
+
+<div class="cta-strip">
+ <h2>Start with a gap assessment, not a sales call.</h2>
+ <p>Tell us what regulation you're facing and where you are in the process. We'll give you an honest read on scope, timeline, and what's actually involved before you commit to anything.</p>
+ <a href="contact.html" class="btn-primary">Start the conversation →</a>
+</div>
+
+<footer>
+ <div class="footer-inner">
+ <div>
+ <span class="footer-logo">Measurement<span>P</span>ros</span>
+ <span class="footer-tagline">ISO 42001 · EU AI Act · Bias Audits · IVO</span>
+ </div>
+ <div class="footer-nav">
+ <a href="about.html">About</a>
+ <a href="iso-42001.html">ISO/IEC 42001</a>
+ <a href="eu-ai-act.html">EU AI Act</a>
+ <a href="bias-audits.html">Bias Audits</a>
+ <a href="ivo-capability.html">IVO Capability</a>
+ <a href="insights.html">Insights</a>
+ <a href="contact.html">Let's Talk</a>
+ </div>
+ <div class="footer-contact">
+ <a href="mailto:js@measurementpros.io">js@measurementpros.io</a>
+ <span>Austin, TX · Bratislava, Slovakia</span>
+ </div>
+ </div>
+ <div class="footer-bar">
+ <span>© 2020–2026 Quantitative Language LLC, Austin, Texas · Bratislava, Slovakia. All Rights Reserved.</span>
+ <div class="footer-links">
+ <a href="terms-of-service.html">Terms of Service</a>
+ <a href="privacy-policy.html">Privacy Policy</a>
+ </div>
+ </div>
+</footer>

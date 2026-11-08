@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Five Steps to Analytics GDPR Compliance: Don't Wait | MeasurementPros</title>
+<meta name="description" content="GDPR compliance for analytics isn't optional and it isn't complicated. Five concrete steps — data mapping, minimization, consent, DPIAs, and understanding your obligations — to get your analytics practice in order.">
+<link rel="canonical" href="https://measurementpros.io/insights/five-steps-analytics-compliance.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root {
+  --navy: #1a2540; --orange: #c84b1e; --orange-light: #d85c2c;
+  --bg: #fafaf8; --surface: #ffffff; --rule: #dddcd9;
+  --text: #3c485b; --text-heading: #1a2540; --muted: #505d70;
+  --light-bg: #f2efe9; --tag-bg: #eef0f5;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --navy: #dde4f0; --orange: #e06535; --orange-light: #e87a4a;
+    --bg: #11141c; --surface: #1a1f2e; --rule: #2a3045;
+    --text: #b8c4d4; --text-heading: #dde4f0; --muted: #8090a8;
+    --light-bg: #161b28; --tag-bg: #1e2535;
+  }
+}
+:root[data-theme="dark"] {
+  --navy: #dde4f0; --orange: #e06535; --orange-light: #e87a4a;
+  --bg: #11141c; --surface: #1a1f2e; --rule: #2a3045;
+  --text: #b8c4d4; --text-heading: #dde4f0; --muted: #8090a8;
+  --light-bg: #161b28; --tag-bg: #1e2535;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 19px; }
+body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; }
+nav { position: sticky; top: 0; z-index: 100; background: var(--navy); padding: 0 2rem; display: flex; align-items: center; gap: 2rem; height: 64px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.nav-logo { font-size: 1.1rem; font-weight: 700; color: #fff; text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+.nav-logo span { color: var(--orange); }
+.nav-links { display: flex; align-items: center; gap: 0.15rem; list-style: none; margin-left: auto; }
+.nav-links a { font-size: 0.895rem; font-weight: 500; color: rgba(255,255,255,0.78); text-decoration: none; padding: 0.35rem 0.65rem; border-radius: 4px; transition: color 0.15s, background 0.15s; white-space: nowrap; }
+.nav-links a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+.nav-cta { background: var(--orange) !important; color: #fff !important; border-radius: 5px !important; padding: 0.4rem 0.9rem !important; }
+.nav-cta:hover { background: var(--orange-light) !important; }
+.article-wrap { max-width: 740px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+.breadcrumb { font-size: 0.78rem; color: var(--muted); margin-bottom: 2rem; }
+.breadcrumb a { color: var(--muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--orange); }
+.breadcrumb span { margin: 0 0.4rem; }
+.post-tag { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; background: var(--tag-bg); color: var(--muted); padding: 0.25rem 0.6rem; border-radius: 3px; text-decoration: none; margin-bottom: 1rem; }
+.post-tag:hover { color: var(--orange); }
+h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 700; color: var(--text-heading); line-height: 1.2; margin-bottom: 1rem; }
+.post-meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--rule); }
+.post-meta strong { color: var(--text); }
+.article-body h2 { font-size: 1.25rem; font-weight: 700; color: var(--text-heading); margin: 2.5rem 0 0.75rem; line-height: 1.3; }
+.article-body p { margin-bottom: 1.25rem; line-height: 1.75; }
+.article-body ul { margin: 0 0 1.25rem 1.5rem; }
+.article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+.article-body strong { color: var(--text-heading); font-weight: 600; }
+.callout { background: var(--light-bg); border-left: 3px solid var(--orange); padding: 1.25rem 1.5rem; border-radius: 0 6px 6px 0; margin: 2rem 0; font-size: 0.95rem; line-height: 1.7; }
+.callout strong { color: var(--text-heading); display: block; margin-bottom: 0.3rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.post-footer { margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.post-footer a { color: var(--orange); text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+.post-footer a:hover { text-decoration: underline; }
+.related-cta { background: var(--navy); border-radius: 8px; padding: 2rem; margin-top: 3rem; color: rgba(255,255,255,0.8); }
+.related-cta h3 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
+.related-cta p { font-size: 0.88rem; line-height: 1.65; margin-bottom: 1rem; }
+.related-cta a { display: inline-block; background: var(--orange); color: #fff; font-size: 0.88rem; font-weight: 600; padding: 0.6rem 1.25rem; border-radius: 5px; text-decoration: none; }
+.related-cta a:hover { background: var(--orange-light); }
+footer { background: #0e1220; color: rgba(255,255,255,0.6); padding: 3rem 2rem 2rem; }
+.footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1.5fr; gap: 3rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.footer-brand-name { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
+.footer-brand-name span { color: var(--orange); }
+.footer-tagline { font-size: 0.8rem; color: rgba(255,255,255,0.45); line-height: 1.6; }
+.footer-col h4 { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 1rem; }
+.footer-col a { display: block; color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.85rem; margin-bottom: 0.5rem; }
+.footer-col a:hover { color: #fff; }
+.footer-address { font-size: 0.82rem; line-height: 1.7; color: rgba(255,255,255,0.5); }
+.footer-bottom { max-width: 1100px; margin: 1.5rem auto 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+.footer-bottom a { color: rgba(255,255,255,0.35); text-decoration: none; }
+@media (max-width: 768px) {
+  html { font-size: 17px; }
+  nav { padding: 0 1rem; }
+  .nav-links { display: none; }
+  .article-wrap { padding: 2.5rem 1.25rem 4rem; }
+  .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .post-footer { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">Measurement<span>P</span>ros</a>
+  <ul class="nav-links">
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../iso-42001.html">ISO/IEC 42001</a></li>
+    <li><a href="../eu-ai-act.html">EU AI Act</a></li>
+    <li><a href="../bias-audits.html">Bias Audits (NY 144/CA)</a></li>
+    <li><a href="../ivo-capability.html">IVO Capability</a></li>
+    <li><a href="../insights.html">Insights</a></li>
+    <li><a href="../contact.html" class="nav-cta">Let's Talk</a></li>
+  </ul>
+</nav>
+
+<div class="article-wrap">
+  <div class="breadcrumb">
+    <a href="../insights.html">Insights</a>
+    <span>›</span>
+    Analytics
+  </div>
+
+  <a href="../insights.html" class="post-tag">Analytics</a>
+
+  <h1>Five Steps to Analytics GDPR Compliance: Don't Wait</h1>
+
+  <div class="post-meta">
+    By <strong>MeasurementPros</strong> · October 2023
+  </div>
+
+  <div class="article-body">
+    <p>
+      GDPR enforcement against analytics practices has moved from theoretical to routine. The Austrian, French, and Italian data protection authorities have each issued decisions against the use of Google Analytics that found the tool's data transfers to the US violated GDPR requirements. More enforcement actions have followed. The posture of waiting to see what happens is no longer available.
+    </p>
+
+    <p>
+      The five steps below won't make every decision for you — GDPR compliance involves judgment calls specific to your organization — but they establish the foundation that everything else depends on.
+    </p>
+
+    <h2>Step 1: Understand what personal data your analytics collects</h2>
+
+    <p>
+      GDPR defines personal data broadly: any information relating to an identified or identifiable natural person. For analytics, this includes IP addresses, device identifiers, cookie values, and any user-provided information that gets passed into your analytics platform. It also includes data that can be combined with other information to identify someone — which is a wider category than most analytics teams initially assume.
+    </p>
+
+    <p>
+      Understand your data subjects' rights under GDPR: the right to access their data, to correct it, to have it deleted, and to have it ported to another service. Your analytics implementation needs to support those rights operationally, not just acknowledge them in a privacy notice.
+    </p>
+
+    <h2>Step 2: Map what you collect, where it goes, and who touches it</h2>
+
+    <p>
+      Data mapping is unglamorous work that most organizations skip or do incompletely. The result is that when a regulator asks what personal data you collect, how long you retain it, where it's stored, and which third parties process it — which are standard questions in any enforcement inquiry — you can't answer from documented records.
+    </p>
+
+    <p>
+      For analytics specifically, that map includes your analytics platform, your tag management system, any third-party pixels or SDKs that fire alongside your analytics tags, your BigQuery or data warehouse destination if you have one, and any BI tools that query the data. Each of those is a processing activity under GDPR, and each needs to be documented.
+    </p>
+
+    <h2>Step 3: Collect only what you actually need</h2>
+
+    <p>
+      Data minimization is a GDPR principle, not just good hygiene. Collect the data that is necessary for the specific purposes you've defined. If you're collecting user-level identifiers that don't serve a purpose you can articulate, you're carrying both a compliance risk and a liability you don't need.
+    </p>
+
+    <p>
+      For most analytics implementations, this means reviewing every custom dimension and event parameter you're collecting and asking whether each one serves a documented purpose. The ones that don't have a clear answer are the ones to remove.
+    </p>
+
+    <h2>Step 4: Get consent right — and make it easy to withdraw</h2>
+
+    <p>
+      GDPR consent must be freely given, specific, informed, and unambiguous. Pre-ticked boxes don't count. Consent for analytics must be separate from consent for other purposes. And the user must be able to withdraw consent as easily as they gave it — a one-click opt-out, not a buried settings menu.
+    </p>
+
+    <p>
+      Your consent mechanism — the cookie banner and the underlying consent management platform — needs to actually reflect what fires when a user consents or declines. That means your tags need to be conditional on consent signals, not firing by default and relying on opt-out. Consent-mode implementations vary significantly in how well they achieve this; the difference between a compliant implementation and a non-compliant one isn't visible to the user, but it is visible to a technical audit.
+    </p>
+
+    <h2>Step 5: Conduct Data Protection Impact Assessments for high-risk processing</h2>
+
+    <p>
+      A DPIA is required under GDPR when processing is "likely to result in a high risk" to individuals. For analytics, that threshold is reached by large-scale processing of behavioral data, systematic monitoring, or use of new technologies whose privacy impact hasn't been established. If you're using GA4 with full user-level tracking at any significant scale, you're likely in DPIA territory.
+    </p>
+
+    <p>
+      A DPIA isn't a one-time document. It needs to assess the necessity and proportionality of the processing, evaluate the risks to data subjects and the measures you're taking to address them, and be revisited when your processing changes materially. Organizations that have done one DPIA and filed it away are not in ongoing compliance.
+    </p>
+
+    <div class="callout">
+      <strong>The bottom line</strong>
+      GDPR compliance in analytics is a posture, not a checkbox. The organizations that treat it as a one-time project rather than an ongoing practice are the ones that find enforcement actions catching them mid-update rather than mid-preparation.
+    </div>
+
+    <div class="related-cta">
+      <h3>Analytics compliance review</h3>
+      <p>If you're not sure where your analytics implementation stands against GDPR requirements, a structured review is the fastest way to find out — and to get a prioritized list of what needs to change.</p>
+      <a href="../contact.html">Talk to us</a>
+    </div>
+  </div>
+
+  <div class="post-footer">
+    <a href="../insights.html">← Back to Insights</a>
+    <a href="../contact.html">Get in touch →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">Measurement<span>P</span>ros</div>
+      <p class="footer-tagline">ISO 42001 · EU AI Act · Bias Audits · IVO<br>Quantitative Language LLC</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="../iso-42001.html">ISO/IEC 42001</a>
+      <a href="../eu-ai-act.html">EU AI Act</a>
+      <a href="../bias-audits.html">Bias Audits (NY 144/CA)</a>
+      <a href="../ivo-capability.html">IVO Capability</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p class="footer-address">4576 Research Forest Dr Suite 200<br>The Woodlands TX 77381<br><br>600 Congress Ave · Austin TX 78701<br><br>Bratislava, Slovakia</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2020–2026 Quantitative Language LLC. The Woodlands · Austin · Bratislava. All rights reserved.</p>
+    <p><a href="../privacy-policy.html">Privacy Policy</a> · <a href="../terms.html">Terms</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | MeasurementPros</title>
+<meta name="description" content="Talk to MeasurementPros about ISO 42001 certification, EU AI Act readiness, bias audits under NY Local Law 144 or California ADMT, or IVO capability. Schedule a call or send a message.">
+<link rel="canonical" href="https://measurementpros.io/contact.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root {
+ --navy: #1a2540;
+ --orange: #c84b1e;
+ --orange-light: #d85c2c;
+ --bg: #fafaf8;
+ --surface: #ffffff;
+ --rule: #dddcd9;
+ --text: #3c485b;
+ --text-heading: #1a2540;
+ --muted: #505d70;
+ --light-bg: #f2efe9;
+ --tag-bg: #eef0f5;
+}
+@media (prefers-color-scheme: dark) {
+:root:not([data-theme="light"]) {
+ --navy: #dde4f0; --orange: #e06535; --orange-light: #e87a4a;
+ --bg: #11141c; --surface: #1a1f2e; --rule: #2a3045;
+ --text: #b8c4d4; --text-heading: #dde4f0; --muted: #8090a8;
+ --light-bg: #161b28; --tag-bg: #1e2535;
+ }
+}
+:root[data-theme="dark"] {
+ --navy: #dde4f0; --orange: #e06535; --orange-light: #e87a4a;
+ --bg: #11141c; --surface: #1a1f2e; --rule: #2a3045;
+ --text: #b8c4d4; --text-heading: #dde4f0; --muted: #8090a8;
+ --light-bg: #161b28; --tag-bg: #1e2535;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 19px; }
+body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; }
+
+/* NAV */
+nav {
+ position: sticky; top: 0; z-index: 100;
+ background: var(--navy); padding: 0 2rem;
+ display: flex; align-items: center; gap: 2rem; height: 64px;
+ border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.nav-logo { font-size: 1.1rem; font-weight: 700; color: #fff; text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+.nav-logo span { color: var(--orange); }
+.nav-links { display: flex; align-items: center; gap: 0.15rem; list-style: none; margin-left: auto; }
+.nav-links a { font-size: 0.895rem; font-weight: 500; color: rgba(255,255,255,0.78); text-decoration: none; padding: 0.35rem 0.65rem; border-radius: 4px; transition: color 0.15s, background 0.15s; white-space: nowrap; }
+.nav-links a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+.nav-links a.active { color: #fff; }
+.nav-cta { background: var(--orange) !important; color: #fff !important; border-radius: 5px !important; padding: 0.4rem 0.9rem !important; }
+.nav-cta:hover { background: var(--orange-light) !important; }
+
+/* HERO */
+.page-hero {
+ background: var(--navy); padding: 4.5rem 2rem 4rem;
+ text-align: center; color: #fff;
+}
+.page-hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; margin-bottom: 0.75rem; }
+.page-hero p { font-size: 1.1rem; color: rgba(255,255,255,0.7); max-width: 540px; margin: 0 auto; line-height: 1.65; }
+
+/* TWO-COLUMN LAYOUT */
+.contact-wrap {
+ max-width: 1100px; margin: 0 auto;
+ padding: 5rem 2rem 7rem;
+ display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start;
+}
+
+/* LEFT CALENDLY */
+.calendly-col h2 {
+ font-size: 1.3rem; font-weight: 700; color: var(--text-heading);
+ margin-bottom: 0.5rem;
+}
+.calendly-col.lead {
+ font-size: 0.95rem; color: var(--muted); margin-bottom: 1.75rem; line-height: 1.7;
+}
+.calendly-embed-wrap {
+ border: 1px solid var(--rule); border-radius: 8px; overflow: hidden;
+ background: var(--surface);
+ min-height: 620px;
+}
+.calendly-inline-widget {
+ width: 100%; min-height: 620px; border: none;
+}
+
+/* RIGHT FORM */
+.form-col h2 {
+ font-size: 1.3rem; font-weight: 700; color: var(--text-heading);
+ margin-bottom: 0.5rem;
+}
+.form-col.lead {
+ font-size: 0.95rem; color: var(--muted); margin-bottom: 1.75rem; line-height: 1.7;
+}
+
+.contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
+
+.form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+.form-group label {
+ font-size: 0.78rem; font-weight: 600; color: var(--text-heading);
+ letter-spacing: 0.03em;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+ font-family: 'Inter', system-ui, sans-serif;
+ font-size: 0.9rem; color: var(--text);
+ background: var(--surface); border: 1px solid var(--rule);
+ border-radius: 5px; padding: 0.65rem 0.85rem;
+ transition: border-color 0.15s;
+ width: 100%;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+ outline: none; border-color: var(--orange);
+}
+.form-group textarea { resize: vertical; min-height: 130px; }
+.form-group select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23505d70' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.85rem center; padding-right: 2.5rem; cursor: pointer; }
+
+.form-submit {
+ background: var(--orange); color: #fff;
+ font-family: 'Inter', system-ui, sans-serif;
+ font-size: 0.92rem; font-weight: 700;
+ border: none; border-radius: 5px; padding: 0.85rem 1.5rem;
+ cursor: pointer; transition: background 0.15s; margin-top: 0.25rem;
+ letter-spacing: 0.01em;
+}
+.form-submit:hover { background: var(--orange-light); }
+
+.form-note {
+ font-size: 0.75rem; color: var(--muted); line-height: 1.6; margin-top: 0.25rem;
+}
+
+/* SUCCESS STATE */
+.form-success {
+ display: none; background: var(--light-bg);
+ border: 1px solid var(--rule); border-left: 3px solid var(--orange);
+ border-radius: 0 6px 6px 0; padding: 1.5rem 1.75rem; margin-top: 1rem;
+}
+.form-success h3 { font-size: 1rem; font-weight: 700; color: var(--text-heading); margin-bottom: 0.4rem; }
+.form-success p { font-size: 0.88rem; color: var(--muted); line-height: 1.65; }
+
+/* LOCATIONS STRIP */
+.locations-strip {
+ background: var(--light-bg); border-top: 1px solid var(--rule);
+ padding: 3.5rem 2rem;
+}
+.locations-inner {
+ max-width: 1100px; margin: 0 auto;
+ display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
+}
+.location-card h4 {
+ font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
+ text-transform: uppercase; color: var(--orange); margin-bottom: 0.6rem;
+}
+.location-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
+
+/* FOOTER */
+footer { background: #0e1220; color: rgba(255,255,255,0.6); padding: 3rem 2rem 2rem; }
+.footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1.5fr; gap: 3rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.footer-brand-name { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
+.footer-brand-name span { color: var(--orange); }
+.footer-tagline { font-size: 0.8rem; color: rgba(255,255,255,0.45); line-height: 1.6; }
+.footer-col h4 { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 1rem; }
+.footer-col a { display: block; color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.85rem; margin-bottom: 0.5rem; }
+.footer-col a:hover { color: #fff; }
+.footer-address { font-size: 0.82rem; line-height: 1.7; color: rgba(255,255,255,0.5); }
+.footer-bottom { max-width: 1100px; margin: 1.5rem auto 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+.footer-bottom a { color: rgba(255,255,255,0.35); text-decoration: none; }
+
+@media (max-width: 900px) {
+.contact-wrap { grid-template-columns: 1fr; gap: 3.5rem; }
+.locations-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+@media (max-width: 768px) {
+ html { font-size: 17px; }
+ nav { padding: 0 1rem; }
+.nav-links { display: none; }
+.page-hero { padding: 3rem 1.25rem 2.75rem; }
+.contact-wrap { padding: 3rem 1.25rem 5rem; }
+.footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+ <a href="index.html" class="nav-logo">Measurement<span>P</span>ros</a>
+ <ul class="nav-links">
+ <li><a href="about.html">About</a></li>
+ <li><a href="iso-42001.html">ISO/IEC 42001</a></li>
+ <li><a href="eu-ai-act.html">EU AI Act</a></li>
+ <li><a href="bias-audits.html">Bias Audits (NY 144/CA)</a></li>
+ <li><a href="ivo-capability.html">IVO Capability</a></li>
+ <li><a href="insights.html">Insights</a></li>
+ <li><a href="contact.html" class="nav-cta active">Let's Talk</a></li>
+ </ul>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+ <h1>Let's Talk</h1>
+ <p>Schedule a call or send a message. We typically respond within one business day.</p>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="contact-wrap">
+
+ <!-- LEFT: CALENDLY -->
+ <div class="calendly-col">
+ <h2>Schedule a call</h2>
+ <p class="lead">Book a 60-minute conversation to talk through your situation whether that's an upcoming audit, a compliance deadline, or just figuring out where to start.</p>
+ <div class="calendly-embed-wrap">
+ <iframe
+ class="calendly-inline-widget"
+ src="https://calendly.com/admeasurementpros/60min?hide_landing_page_details=1&hide_gdpr_banner=1&primary_color=c84b1e"
+ title="Schedule a call with MeasurementPros"
+ loading="lazy">
+ </iframe>
+ </div>
+ </div>
+
+ <!-- RIGHT: FORM -->
+ <div class="form-col">
+ <h2>Send a message</h2>
+ <p class="lead">Prefer to write it out first? Tell us what you're working on and we'll follow up directly.</p>
+
+ <form
+ class="contact-form"
+ id="contact-form"
+ action="https://api.web3forms.com/submit"
+ method="POST">
+
+ <!-- Web3Forms key replace YOUR_WEB3FORMS_KEY before go-live -->
+ <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
+ <input type="hidden" name="subject" value="New inquiry from measurementpros.io">
+ <input type="hidden" name="redirect" value="false">
+ <input type="checkbox" name="botcheck" style="display:none">
+
+ <div class="form-group">
+ <label for="name">Your name</label>
+ <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+ </div>
+
+ <div class="form-group">
+ <label for="email">Work email</label>
+ <input type="email" id="email" name="email" placeholder="jane@company.com" required>
+ </div>
+
+ <div class="form-group">
+ <label for="organization">Organization</label>
+ <input type="text" id="organization" name="organization" placeholder="Company or agency name">
+ </div>
+
+ <div class="form-group">
+ <label for="topic">What are you working on?</label>
+ <select id="topic" name="topic">
+ <option value="" disabled selected>Select a topic</option>
+ <option value="ISO 42001">ISO/IEC 42001 certification</option>
+ <option value="EU AI Act">EU AI Act readiness</option>
+ <option value="Bias Audit NY LL 144">Bias audit NY Local Law 144</option>
+ <option value="Bias Audit CA ADMT">Bias audit California ADMT</option>
+ <option value="IVO Capability">IVO capability</option>
+ <option value="Multiple / Not sure">Multiple topics / not sure yet</option>
+ </select>
+ </div>
+
+ <div class="form-group">
+ <label for="message">Tell us more</label>
+ <textarea id="message" name="message" placeholder="Describe your situation, timeline, or any specific questions you have." required></textarea>
+ </div>
+
+ <button type="submit" class="form-submit">Send message</button>
+ <p class="form-note">Your information is used only to respond to your inquiry and is never shared with third parties.</p>
+ </form>
+
+ <div class="form-success" id="form-success">
+ <h3>Message received</h3>
+ <p>Thanks for reaching out. We'll be back to you within one business day. If your matter is urgent, book a call directly using the calendar to the left.</p>
+ </div>
+ </div>
+
+</div>
+
+<!-- LOCATIONS -->
+<div class="locations-strip">
+ <div class="locations-inner">
+ <div class="location-card">
+ <h4>The Woodlands, TX</h4>
+ <p>4576 Research Forest Dr<br>Suite 200<br>The Woodlands, TX 77381</p>
+ </div>
+ <div class="location-card">
+ <h4>Austin, TX</h4>
+ <p>600 Congress Ave<br>Austin, TX 78701</p>
+ </div>
+ <div class="location-card">
+ <h4>Bratislava, Slovakia</h4>
+ <p>Central European operations<br>EU AI Act and ISO 42001<br>engagements</p>
+ </div>
+ </div>
+</div>
+
+<footer>
+ <div class="footer-inner">
+ <div>
+ <div class="footer-brand-name">Measurement<span>P</span>ros</div>
+ <p class="footer-tagline">ISO 42001 · EU AI Act · Bias Audits · IVO<br>Quantitative Language LLC</p>
+ </div>
+ <div class="footer-col">
+ <h4>Services</h4>
+ <a href="iso-42001.html">ISO/IEC 42001</a>
+ <a href="eu-ai-act.html">EU AI Act</a>
+ <a href="bias-audits.html">Bias Audits (NY 144/CA)</a>
+ <a href="ivo-capability.html">IVO Capability</a>
+ </div>
+ <div class="footer-col">
+ <h4>Contact</h4>
+ <p class="footer-address">4576 Research Forest Dr Suite 200<br>The Woodlands TX 77381<br><br>600 Congress Ave · Austin TX 78701<br><br>Bratislava, Slovakia</p>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <p>© 2020–2026 Quantitative Language LLC. The Woodlands · Austin · Bratislava. All rights reserved.</p>
+ <p><a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Terms</a></p>
+ </div>
+</footer>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
+ e.preventDefault();
+ const form = e.target;
+ const btn = form.querySelector('.form-submit');
+ btn.textContent = 'Sending…';
+ btn.disabled = true;
+
+ try {
+ const res = await fetch(form.action, {
+ method: 'POST',
+ body: new FormData(form),
+ headers: { 'Accept': 'application/json' }
+ });
+ const data = await res.json();
+ if (data.success) {
+ form.style.display = 'none';
+ document.getElementById('form-success').style.display = 'block';
+ } else {
+ btn.textContent = 'Send message';
+ btn.disabled = false;
+ alert('Something went wrong. Please try again or email us directly.');
+ }
+ } catch {
+ btn.textContent = 'Send message';
+ btn.disabled = false;
+ alert('Something went wrong. Please try again or email us directly.');
+ }
+});
+</script>
+
+</body>
+</html>
