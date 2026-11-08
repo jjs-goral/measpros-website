@@ -34,7 +34,7 @@ html { font-size: 19px; }
 body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; }
 nav { position: sticky; top: 0; z-index: 100; background: var(--navy); padding: 0 2rem; display: flex; align-items: center; gap: 2rem; height: 64px; border-bottom: 1px solid rgba(255,255,255,0.08); }
 .nav-logo { font-size: 1.1rem; font-weight: 700; color: #fff; text-decoration: none; white-space: nowrap; flex-shrink: 0; }
-.nav-logo span { color: var(--orange); }
+
 .nav-links { display: flex; align-items: center; gap: 0.15rem; list-style: none; margin-left: auto; }
 .nav-links a { font-size: 0.895rem; font-weight: 500; color: rgba(255,255,255,0.78); text-decoration: none; padding: 0.35rem 0.65rem; border-radius: 4px; transition: color 0.15s, background 0.15s; white-space: nowrap; }
 .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.08); }
@@ -68,7 +68,7 @@ h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 700; color: var(--text-
 footer { background: #0e1220; color: rgba(255,255,255,0.6); padding: 3rem 2rem 2rem; }
 .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1.5fr; gap: 3rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
 .footer-brand-name { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
-.footer-brand-name span { color: var(--orange); }
+
 .footer-tagline { font-size: 0.8rem; color: rgba(255,255,255,0.45); line-height: 1.6; }
 .footer-col h4 { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 1rem; }
 .footer-col a { display: block; color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.85rem; margin-bottom: 0.5rem; }
@@ -89,7 +89,7 @@ footer { background: #0e1220; color: rgba(255,255,255,0.6); padding: 3rem 2rem 2
 <body>
 
 <nav>
-  <a href="../index.html" class="nav-logo">Measurement<span>P</span>ros</a>
+  <a href="../index.html" class="nav-logo">Measurement<span style="display:inline-block;background:#c84b1e;color:#fff;padding:0 3px;margin:0 1px;border-radius:2px;">P</span>ros</a>
   <ul class="nav-links">
     <li><a href="../about.html">About</a></li>
     <li><a href="../iso-42001.html">ISO/IEC 42001</a></li>
@@ -183,7 +183,7 @@ footer { background: #0e1220; color: rgba(255,255,255,0.6); padding: 3rem 2rem 2
 <footer>
   <div class="footer-inner">
     <div>
-      <div class="footer-brand-name">Measurement<span>P</span>ros</div>
+      <div class="footer-brand-name">Measurement<span style="display:inline-block;background:#c84b1e;color:#fff;padding:0 3px;margin:0 1px;border-radius:2px;">P</span>ros</div>
       <p class="footer-tagline">ISO 42001 · EU AI Act · Bias Audits · IVO<br>Quantitative Language LLC</p>
     </div>
     <div class="footer-col">
