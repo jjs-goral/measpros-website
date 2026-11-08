@@ -1,0 +1,360 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DORA Compliance | MeasurementPros</title>
+<meta name="description" content="DORA compliance for financial entities. MeasurementPros brings decades of financial institution experience to ICT risk management, the Register of Information, third-party oversight, and resilience testing under the Digital Operational Resilience Act.">
+<link rel="canonical" href="https://measurementpros.io/dora.html">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+
+<style>
+:root {
+ --navy: #1a2540;
+ --orange: #c84b1e;
+ --orange-light: #d85c2c;
+ --bg: #fafaf8;
+ --surface: #ffffff;
+ --rule: #dddcd9;
+ --text: #3c485b;
+ --text-heading: #1a2540;
+ --muted: #505d70;
+ --light-bg: #f2efe9;
+ --card-bg: #ffffff;
+ --tag-bg: #eef0f5;
+}
+@media (prefers-color-scheme: dark) {
+:root:not([data-theme="light"]) {
+ --bg: #111827; --surface: #1e2a3a; --rule: #2d3a4e;
+ --text: #c8d0db; --text-heading: #f0ede8; --muted: #94a3b8;
+ --light-bg: #1a2435; --card-bg: #1e2a3a; --tag-bg: #243044;
+ }
+}
+:root[data-theme="dark"] {
+ --bg: #111827; --surface: #1e2a3a; --rule: #2d3a4e;
+ --text: #c8d0db; --text-heading: #f0ede8; --muted: #94a3b8;
+ --light-bg: #1a2435; --card-bg: #1e2a3a; --tag-bg: #243044;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+ font-family: 'Inter', system-ui, -apple-system, sans-serif;
+ background: var(--bg);
+ color: var(--text);
+ font-size: 19px;
+ line-height: 1.6;
+}
+
+/* NAV */
+nav {
+ position: sticky;
+ top: env(safe-area-inset-top, 0px);
+ z-index: 100;
+ background: var(--navy);
+ padding: 0 24px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ height: 62px;
+ gap: 16px;
+}
+.nav-logo { font-weight: 800; font-size: 17px; color: #fff; text-decoration: none; letter-spacing: -0.01em; white-space: nowrap; }
+.nav-links { list-style: none; display: flex; gap: 4px; flex-wrap: wrap; justify-content: flex-end; }
+.nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; padding: 6px 10px; border-radius: 4px; transition: color 0.15s, background 0.15s; }
+.nav-links a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+.nav-links a.active { color: #fff; }
+.nav-links a.nav-cta { background: var(--orange); color: #fff; padding: 6px 14px; font-size: 14px; }
+.nav-links a.nav-cta:hover { background: var(--orange-light); }
+
+/* HERO */
+.hero { background: var(--navy); padding: 72px 24px 80px; }
+.hero-inner { max-width: 1100px; margin: 0 auto; }
+.hero-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 16px; }
+.hero h1 { font-size: clamp(34px, 4vw, 52px); font-weight: 800; color: #fff; letter-spacing: -0.03em; line-height: 1.1; text-wrap: balance; margin-bottom: 20px; max-width: 820px; }
+.hero h1 em { color: var(--orange); font-style: normal; }
+.hero-sub { font-size: 21px; color: rgba(255,255,255,0.78); max-width: 680px; margin-bottom: 36px; line-height: 1.55; }
+.hero-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 36px; }
+.hero-tag { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14); border-radius: 4px; padding: 4px 10px; letter-spacing: 0.04em; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-primary { background: var(--orange); color: #fff; font-weight: 700; font-size: 16px; padding: 14px 28px; border-radius: 6px; text-decoration: none; transition: background 0.15s; display: inline-block; }
+.btn-primary:hover { background: var(--orange-light); }
+.btn-ghost { background: rgba(255,255,255,0.1); color: #fff; font-weight: 600; font-size: 16px; padding: 14px 28px; border-radius: 6px; text-decoration: none; border: 1px solid rgba(255,255,255,0.2); transition: background 0.15s; display: inline-block; }
+.btn-ghost:hover { background: rgba(255,255,255,0.18); }
+
+/* SECTIONS */
+.section { max-width: 1100px; margin: 0 auto; padding: 72px 24px; border-bottom: 1px solid var(--rule); }
+.section:last-of-type { border-bottom: none; }
+.section-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 14px; }
+.section h2 { font-size: clamp(26px, 3vw, 38px); font-weight: 800; color: var(--text-heading); letter-spacing: -0.025em; line-height: 1.2; text-wrap: balance; margin-bottom: 18px; }
+.section-lead { font-size: 19px; color: var(--muted); max-width: 700px; margin-bottom: 48px; line-height: 1.65; }
+
+/* PILLARS GRID */
+.pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2px; background: var(--rule); border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; margin-bottom: 48px; }
+.pillar-card { background: var(--card-bg); padding: 28px 24px; }
+.pillar-num { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 10px; }
+.pillar-card h3 { font-size: 17px; font-weight: 800; color: var(--text-heading); letter-spacing: -0.01em; margin-bottom: 10px; line-height: 1.3; }
+.pillar-card p { font-size: 15px; color: var(--muted); line-height: 1.6; }
+
+/* WHAT WE DO */
+.services-list { display: flex; flex-direction: column; gap: 0; }
+.service-item { border-bottom: 1px solid var(--rule); padding: 28px 0; display: grid; grid-template-columns: 220px 1fr; gap: 32px; align-items: start; }
+.service-item:first-child { padding-top: 0; }
+.service-item:last-child { border-bottom: none; }
+@media (max-width: 640px) { .service-item { grid-template-columns: 1fr; gap: 8px; } }
+.service-label { font-size: 13px; font-weight: 700; color: var(--text-heading); letter-spacing: 0.02em; padding-top: 2px; }
+.service-desc { font-size: 18px; color: var(--muted); line-height: 1.65; }
+
+/* WHY US STRIP */
+.why-strip { background: var(--navy); padding: 64px 24px; }
+.why-inner { max-width: 1100px; margin: 0 auto; }
+.why-strip .section-eyebrow { margin-bottom: 14px; }
+.why-strip h2 { font-size: clamp(26px, 2.5vw, 36px); font-weight: 800; color: #fff; letter-spacing: -0.025em; line-height: 1.2; text-wrap: balance; margin-bottom: 24px; max-width: 700px; }
+.why-points { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+.why-point { }
+.why-point-label { font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--orange); margin-bottom: 8px; }
+.why-point p { font-size: 17px; color: rgba(255,255,255,0.72); line-height: 1.65; }
+
+/* SCOPE NOTE */
+.scope-strip { background: var(--light-bg); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 48px 24px; }
+.scope-inner { max-width: 1100px; margin: 0 auto; }
+.scope-inner h2 { font-size: clamp(22px, 2vw, 30px); font-weight: 800; color: var(--text-heading); letter-spacing: -0.02em; margin-bottom: 16px; text-wrap: balance; }
+.scope-inner p { font-size: 18px; color: var(--muted); max-width: 760px; line-height: 1.65; margin-bottom: 14px; }
+.scope-inner p:last-child { margin-bottom: 0; }
+
+/* CONTACT */
+.contact-section { max-width: 1100px; margin: 0 auto; padding: 72px 24px; }
+.contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+@media (max-width: 640px) { .contact-wrap { grid-template-columns: 1fr; gap: 32px; } }
+.contact-info h3 { font-size: 22px; font-weight: 700; color: var(--text-heading); margin-bottom: 14px; }
+.contact-info p { font-size: 17px; color: var(--muted); margin-bottom: 16px; line-height: 1.65; }
+.contact-detail { display: flex; flex-direction: column; gap: 8px; margin-top: 20px; }
+.contact-detail a { font-size: 16px; font-weight: 600; color: var(--orange); text-decoration: none; }
+.contact-detail a:hover { text-decoration: underline; }
+form { display: flex; flex-direction: column; gap: 12px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 480px) { .form-row { grid-template-columns: 1fr; } }
+input, textarea, select { width: 100%; padding: 12px 14px; border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); color: var(--text); font-family: inherit; font-size: 16px; outline: none; transition: border-color 0.15s; }
+input:focus, textarea:focus, select:focus { border-color: var(--orange); }
+textarea { resize: vertical; min-height: 110px; }
+.form-submit { background: var(--orange); color: #fff; border: none; border-radius: 6px; padding: 14px 28px; font-family: inherit; font-size: 16px; font-weight: 700; cursor: pointer; transition: background 0.15s; align-self: flex-start; }
+.form-submit:hover { background: var(--orange-light); }
+#form-success { background: #d1fae5; color: #065f46; border-radius: 6px; padding: 14px 16px; font-size: 16px; font-weight: 600; }
+
+/* FOOTER */
+footer { background: var(--navy); padding: 28px 24px; color: rgba(255,255,255,0.55); font-size: 13px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
+footer a:hover { color: #fff; }
+.footer-links { display: flex; gap: 16px; }
+
+@media (max-width: 600px) { .nav-links { display: none; } }
+</style>
+
+<!-- NAV -->
+<nav>
+ <a href="index.html" class="nav-logo">Measurement<span style="display:inline-block;background:#c84b1e;color:#fff;padding:0 3px;margin:0 1px;border-radius:2px;">P</span>ros</a>
+ <ul class="nav-links">
+ <li><a href="index.html">Home</a></li>
+ <li><a href="iso-42001.html">ISO 42001</a></li>
+ <li><a href="eu-ai-act.html">EU AI Act</a></li>
+ <li><a href="dora.html" class="active">DORA</a></li>
+ <li><a href="bias-audits.html">Bias Audits</a></li>
+ <li><a href="ivo-capability.html">IVO</a></li>
+ <li><a href="insights.html">Insights</a></li>
+ <li><a href="contact.html" class="nav-cta">Let's Talk</a></li>
+ </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+ <div class="hero-inner">
+ <div class="hero-eyebrow">Financial Services / Digital Resilience / ICT Risk</div>
+ <h1>DORA compliance built on <em>decades inside financial institutions.</em></h1>
+ <p class="hero-sub">The Digital Operational Resilience Act took effect January 17, 2025. For banks, investment firms, payment institutions and their critical ICT providers, DORA is a binding operational requirement with supervisory consequences. We have worked inside financial institutions for decades. We know what ICT risk documentation looks like under examination, and we know the difference between a register that satisfies a regulator and one that does not.</p>
+ <div class="hero-tags">
+ <span class="hero-tag">Banks &amp; Investment Firms</span>
+ <span class="hero-tag">Payment Institutions</span>
+ <span class="hero-tag">Insurance Undertakings</span>
+ <span class="hero-tag">Critical ICT Providers</span>
+ </div>
+ <div class="hero-actions">
+ <a href="#contact" class="btn-primary">Discuss your DORA scope</a>
+ <a href="#what-we-do" class="btn-ghost">What we do</a>
+ </div>
+ </div>
+</div>
+
+<!-- FIVE PILLARS -->
+<div class="section">
+ <div class="section-eyebrow">The regulation</div>
+ <h2>Five pillars. All of them operational requirements.</h2>
+ <p class="section-lead">DORA covers five interconnected areas. A gap in any one of them is visible during supervisory examination. We work across all five, grounded in the Level 1 regulation and the Level 2 RTS and ITS that specify how compliance is demonstrated.</p>
+
+ <div class="pillars-grid">
+ <div class="pillar-card">
+ <div class="pillar-num">Pillar 01</div>
+ <h3>ICT Risk Management Framework</h3>
+ <p>Governance structure, risk appetite, policies, controls and evidence that the framework operates. Not a document that describes the right process but a system of records showing it runs.</p>
+ </div>
+ <div class="pillar-card">
+ <div class="pillar-num">Pillar 02</div>
+ <h3>ICT Incident Classification, Reporting &amp; Response</h3>
+ <p>Classification criteria, escalation thresholds, the major incident reporting chain to competent authorities, and the internal records that support each notification.</p>
+ </div>
+ <div class="pillar-card">
+ <div class="pillar-num">Pillar 03</div>
+ <h3>Digital Operational Resilience Testing</h3>
+ <p>Threat-led penetration testing for significant institutions, vulnerability assessments for others, and the methodology, results and remediation records regulators require.</p>
+ </div>
+ <div class="pillar-card">
+ <div class="pillar-num">Pillar 04</div>
+ <h3>ICT Third-Party Risk &amp; Register of Information</h3>
+ <p>Contractual requirements for ICT providers, the Register of Information in the format ESAs examine, concentration risk analysis and ongoing oversight procedures.</p>
+ </div>
+ <div class="pillar-card">
+ <div class="pillar-num">Pillar 05</div>
+ <h3>Information Sharing Arrangements</h3>
+ <p>Participation in threat intelligence sharing, documentation of sharing agreements and their scope, and integration with the incident response function.</p>
+ </div>
+ </div>
+</div>
+
+<!-- WHAT WE DO -->
+<div class="section" id="what-we-do">
+ <div class="section-eyebrow">Our work</div>
+ <h2>What an engagement produces</h2>
+
+ <div class="services-list">
+ <div class="service-item">
+ <div class="service-label">Gap Assessment</div>
+ <p class="service-desc">We map your current posture against the five pillars, the RTS on ICT risk management, and the ITS on the Register of Information. The output is a prioritized gap register with specific corrective actions and the evidence each closure requires, not a summary of things you already knew.</p>
+ </div>
+ <div class="service-item">
+ <div class="service-label">Register of Information</div>
+ <p class="service-desc">The Register of Information is the document supervisors examine most closely. We build or review it against the ESA templates: contractual arrangements, ICT service categories, substitutability assessments, concentration analysis and the supporting data quality controls.</p>
+ </div>
+ <div class="service-item">
+ <div class="service-label">ICT Third-Party Risk Program</div>
+ <p class="service-desc">We design the oversight program: due diligence criteria, contractual minimum requirements, ongoing monitoring procedures and escalation paths for critical or important ICT providers. The program is built to hold up when a supervisory authority asks how concentration risk is managed.</p>
+ </div>
+ <div class="service-item">
+ <div class="service-label">Incident Classification &amp; Reporting</div>
+ <p class="service-desc">We build the classification framework using the RTS criteria, draft the reporting templates for major incident notifications, and document the internal escalation chain so the reporting obligation can be met within regulatory timeframes.</p>
+ </div>
+ <div class="service-item">
+ <div class="service-label">Resilience Testing Scope &amp; Methodology</div>
+ <p class="service-desc">We define the testing scope against DORA's requirements, review existing test programs for coverage gaps, and produce the methodology and results documentation the regulation requires.</p>
+ </div>
+ <div class="service-item">
+ <div class="service-label">Internal Audit of DORA Posture</div>
+ <p class="service-desc">We conduct an independent internal audit of the DORA compliance program, evaluate evidence quality across all five pillars and produce findings with specific closure criteria. The audit is conducted by credentialed lead auditors, not junior consultants.</p>
+ </div>
+ </div>
+</div>
+
+<!-- WHY MEASUREMENTPROS -->
+<div class="why-strip">
+ <div class="why-inner">
+ <div class="section-eyebrow">Why MeasurementPros</div>
+ <h2>Financial institution experience. Not generic IT consulting dressed up for a new regulation.</h2>
+ <div class="why-points">
+ <div class="why-point">
+ <div class="why-point-label">Decades in Finance</div>
+ <p>Our background is quantitative finance, data operations and risk management inside financial institutions. We understand ICT architecture as it actually exists in a bank, not as it appears in a consultant's slide deck.</p>
+ </div>
+ <div class="why-point">
+ <div class="why-point-label">Regulatory Examination Experience</div>
+ <p>We know what supervisory examination looks like from the inside. The Register of Information, incident logs, and third-party oversight records we produce are designed to withstand scrutiny, not pass a self-assessment checklist.</p>
+ </div>
+ <div class="why-point">
+ <div class="why-point-label">Control-Level Work</div>
+ <p>DORA sits at the intersection of ICT, operational risk and third-party governance. We work at the control level, tracing each requirement to a process, a record, and an owner, not at the summary level where most compliance work stops.</p>
+ </div>
+ </div>
+ </div>
+</div>
+
+<!-- SCOPE NOTE -->
+<div class="scope-strip">
+ <div class="scope-inner">
+ <div class="section-eyebrow">Who DORA applies to</div>
+ <h2>In-scope entities and ICT providers</h2>
+ <p>DORA applies directly to financial entities regulated under EU law: credit institutions, payment institutions, e-money institutions, investment firms, insurance and reinsurance undertakings, crypto-asset service providers and others. It also applies to critical ICT third-party providers designated by the ESAs.</p>
+ <p>If you are a US-headquartered financial institution with EU operations, an ICT provider whose financial-entity clients are subject to DORA, or a financial group determining which entities fall within scope, the first task is a clear applicability analysis. We start there.</p>
+ </div>
+</div>
+
+<!-- CONTACT -->
+<div class="contact-section" id="contact">
+ <div class="section-eyebrow">Start the conversation</div>
+ <h2 style="font-size: clamp(26px,2.5vw,36px);font-weight:800;color:var(--text-heading);letter-spacing:-0.025em;line-height:1.2;text-wrap:balance;margin-bottom:40px;">Tell us your entity type, your ICT footprint, and where your Register of Information stands.</h2>
+
+ <div class="contact-wrap">
+ <div class="contact-info">
+ <h3>What we need to scope the work.</h3>
+ <p>Entity type, the regulation you are subject to, your current state against the five pillars, and any supervisory timeline or examination date that shapes the work. That is enough to give you a clear picture of what an engagement looks like.</p>
+ <p style="font-size:14px;color:var(--muted);font-style:italic;">Please do not send confidential source data, credentials or regulated personal information through this form.</p>
+ <div class="contact-detail">
+ <a href="mailto:js@measurementpros.io">js@measurementpros.io</a>
+ <span style="font-size:14px;color:var(--muted);">Austin, Texas · Bratislava, Slovakia</span>
+ </div>
+ </div>
+
+ <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+ <input type="hidden" name="access_key" value="1c1ea283-6ed2-431b-90bb-e346dd2c0cd1">
+ <input type="hidden" name="subject" value="DORA Enquiry measurementpros.io">
+ <input type="hidden" name="redirect" value="false">
+ <div class="form-row">
+ <input type="text" name="name" placeholder="Your name" required>
+ <input type="email" name="email" placeholder="Email address" required>
+ </div>
+ <input type="text" name="organisation" placeholder="Organisation">
+ <select name="entity_type">
+ <option value="" disabled selected>Entity type</option>
+ <option>Bank / Credit Institution</option>
+ <option>Investment Firm</option>
+ <option>Payment Institution</option>
+ <option>Insurance / Reinsurance</option>
+ <option>ICT Third-Party Provider</option>
+ <option>Other financial entity</option>
+ <option>Not sure / general enquiry</option>
+ </select>
+ <textarea name="message" placeholder="Where are you in your DORA program? What do you need?"></textarea>
+ <button type="submit" class="form-submit">Send enquiry</button>
+ <div id="form-success" hidden>Thank you, we will be in touch shortly.</div>
+ </form>
+ </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+ <span>© Copyright 2020–2026 Quantitative Language LLC, Austin, TEXAS · Bratislava, SLOVAKIA. All Rights Reserved.</span>
+ <div class="footer-links">
+ <a href="terms-of-service.html">Terms of Service</a>
+ <a href="privacy-policy.html">Privacy Policy</a>
+ </div>
+</footer>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
+ e.preventDefault();
+ const form = e.target;
+ const btn = form.querySelector('.form-submit');
+ btn.textContent = 'Sending…';
+ btn.disabled = true;
+ try {
+ const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+ const data = await res.json();
+ if (data.success) {
+ form.reset();
+ document.getElementById('form-success').hidden = false;
+ btn.textContent = 'Sent ✓';
+ } else {
+ btn.textContent = 'Send enquiry';
+ btn.disabled = false;
+ alert('Something went wrong — please email js@measurementpros.io directly.');
+ }
+ } catch {
+ btn.textContent = 'Send enquiry';
+ btn.disabled = false;
+ alert('Something went wrong — please email js@measurementpros.io directly.');
+ }
+});
+</script>
