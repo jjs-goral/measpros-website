@@ -59,11 +59,20 @@ nav {
 .nav-logo { font-weight: 800; font-size: 17px; color: #fff; text-decoration: none; letter-spacing: -0.01em; white-space: nowrap; }
 
 .nav-links { list-style: none; display: flex; gap: 4px; flex-wrap: wrap; justify-content: flex-end; }
-.nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; padding: 6px 10px; border-radius: 4px; transition: color 0.15s, background 0.15s; }
+.nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 15px; font-weight: 500; padding: 6px 10px; border-radius: 4px; transition: color 0.15s, background 0.15s; }
 .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.08); }
 .nav-links a.active { color: #fff; }
 .nav-links a.nav-cta { background: var(--orange); color: #fff; padding: 6px 14px; font-size: 14px; }
 .nav-links a.nav-cta:hover { background: var(--orange-light); }
+.nav-links a.nav-schedule {
+ background: rgba(255,255,255,0.1);
+ color: rgba(255,255,255,0.85);
+ padding: 6px 12px;
+ font-size: 15px;
+ border: 1px solid rgba(255,255,255,0.2);
+ border-radius: 4px;
+}
+.nav-links a.nav-schedule:hover { background: rgba(255,255,255,0.18); color: #fff; }
 
 /* HERO */
 .hero { background: var(--navy); padding: 72px 24px 80px; }
@@ -209,6 +218,7 @@ footer { background: var(--navy); border-top: 1px solid rgba(255,255,255,0.08); 
  <li><a href="ivo-capability.html">IVO</a></li>
  <li><a href="insights.html">Insights</a></li>
  <li><a href="contact.html" class="nav-cta">Let's Talk</a></li>
+ <li><a href="https://calendly.com/admeasurementpros/60min?hide_landing_page_details=1&hide_gdpr_banner=1&primary_color=c84b1e" class="nav-schedule" target="_blank" rel="noopener">Schedule a call</a></li>
  </ul>
 </nav>
 

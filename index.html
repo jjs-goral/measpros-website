@@ -88,7 +88,7 @@ nav {
 .nav-links a {
  color: rgba(255,255,255,0.75);
  text-decoration: none;
- font-size: 14px;
+ font-size: 15px;
  font-weight: 500;
  padding: 6px 10px;
  border-radius: 4px;
@@ -102,6 +102,15 @@ nav {
  font-size: 14px;
 }
 .nav-links a.nav-cta:hover { background: var(--orange-light); }
+.nav-links a.nav-schedule {
+ background: rgba(255,255,255,0.1);
+ color: rgba(255,255,255,0.85);
+ padding: 6px 12px;
+ font-size: 15px;
+ border: 1px solid rgba(255,255,255,0.2);
+ border-radius: 4px;
+}
+.nav-links a.nav-schedule:hover { background: rgba(255,255,255,0.18); color: #fff; }
 
 /* HERO */
 .hero {
@@ -1161,6 +1170,7 @@ footer a:hover { color: #fff; }
  <li><a href="ivo-capability.html">IVO</a></li>
  <li><a href="insights.html">Insights</a></li>
  <li><a href="contact.html" class="nav-cta">Let's Talk</a></li>
+ <li><a href="https://calendly.com/admeasurementpros/60min?hide_landing_page_details=1&hide_gdpr_banner=1&primary_color=c84b1e" class="nav-schedule" target="_blank" rel="noopener">Schedule a call</a></li>
  </ul>
 </nav>
 
@@ -1361,8 +1371,7 @@ footer a:hover { color: #fff; }
  <div class="work-examples-inner">
  <div class="section-eyebrow">Methods &amp; Evidence</div>
  <h2>What an assessment actually looks like</h2>
- <p>An assessment should make it possible to trace a claim to a requirement, a test, a record or a finding. These two examples show the level of detail we regard as useful.</p>
- <p class="work-jump">Jump to: <a href="#example-qms">ISO/IEC 42001 gap assessment</a> · <a href="#example-bias">Algorithmic bias analysis</a></p>
+ <p>An assessment should make it possible to trace a claim to a requirement, a test, a record or a finding. The example below shows the level of detail we regard as useful.</p>
 
  <!-- WORK EXAMPLE 01 -->
  <div class="work-example" id="example-qms">
@@ -1484,222 +1493,13 @@ footer a:hover { color: #fff; }
 
  <hr class="work-example-divider">
 
- <!-- WORK EXAMPLE 02 -->
- <div class="work-example" id="example-bias">
- <div class="work-example-num">Work Example 02</div>
- <h3>Algorithmic bias audit Selection-rate analysis</h3>
-
- <div class="work-meta">
- <div class="work-meta-item">
- <div class="work-meta-label">Scope</div>
- <p>An automated screening tool used to rank applicants for further consideration and a set of <strong>500 application records</strong> with a binary selected / not-selected outcome.</p>
- </div>
- <div class="work-meta-item">
- <div class="work-meta-label">Audit question</div>
- <p>Do selection outcomes differ by demographic category, and can the measures be reproduced from documented source data and a defined selection decision?</p>
- </div>
+ <div style="background:var(--card-bg);border:1px solid var(--rule);border-top:3px solid var(--orange);border-radius:8px;padding:28px 24px;margin-top:40px;">
+ <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--orange);margin-bottom:8px;">Algorithmic Accountability</div>
+ <h3 style="font-size:20px;font-weight:800;color:var(--text-heading);letter-spacing:-0.02em;margin-bottom:12px;">Bias audit and selection-rate analysis</h3>
+ <p style="font-size:17px;color:var(--muted);line-height:1.6;margin-bottom:18px;">A defensible bias audit shows the denominators, methods, calculations and limits of inference, not just a pass or fail badge. We cover NY Local Law 144, California ADMT and employer tools subject to federal guidelines. See the full worked example on our bias audits page.</p>
+ <a href="bias-audits.html" style="font-size:15px;font-weight:700;color:var(--orange);text-decoration:none;">Bias audit services and work example &rarr;</a>
  </div>
 
- <div class="table-section-label">Metric definitions</div>
- <div class="metric-defs">
- <p><strong>Selection rate</strong> = number selected ÷ number evaluated in the category.</p>
- <p><strong>Impact ratio</strong> = category selection rate ÷ highest selection rate in the relevant comparison.</p>
- <p style="font-size:16px; color: var(--muted); margin-top: 8px;">Analyze sex, race/ethnicity and intersectional groups as applicable; separately account for missing/unknown data.</p>
- </div>
-
- <div class="table-section-label">By sex</div>
- <div class="table-scroll">
- <table>
- <thead>
- <tr>
- <th>Category</th>
- <th style="text-align:right">Evaluated</th>
- <th style="text-align:right">Selected</th>
- <th style="text-align:right">Selection rate</th>
- <th style="text-align:right">Impact ratio</th>
- </tr>
- </thead>
- <tbody>
- <tr>
- <td>Men</td>
- <td class="num">250</td>
- <td class="num">125</td>
- <td class="num">50.0%</td>
- <td class="num">1.00</td>
- </tr>
- <tr>
- <td>Women</td>
- <td class="num">250</td>
- <td class="num">100</td>
- <td class="num">40.0%</td>
- <td class="num">0.80</td>
- </tr>
- <tr class="total-row">
- <td><strong>Total</strong></td>
- <td class="num-bold">500</td>
- <td class="num-bold">225</td>
- <td class="num-bold">45.0%</td>
- <td class="num"> </td>
- </tr>
- </tbody>
- </table>
- </div>
-
- <div class="table-section-label">By race / ethnicity</div>
- <div class="table-scroll">
- <table>
- <thead>
- <tr>
- <th>Category</th>
- <th style="text-align:right">Evaluated</th>
- <th style="text-align:right">Selected</th>
- <th style="text-align:right">Selection rate</th>
- <th style="text-align:right">Impact ratio</th>
- </tr>
- </thead>
- <tbody>
- <tr>
- <td>White</td>
- <td class="num">200</td>
- <td class="num">110</td>
- <td class="num">55.0%</td>
- <td class="num">1.00</td>
- </tr>
- <tr>
- <td>Black</td>
- <td class="num">120</td>
- <td class="num">48</td>
- <td class="num">40.0%</td>
- <td class="num">0.73</td>
- </tr>
- <tr>
- <td>Hispanic / Latino</td>
- <td class="num">100</td>
- <td class="num">40</td>
- <td class="num">40.0%</td>
- <td class="num">0.73</td>
- </tr>
- <tr>
- <td>Asian</td>
- <td class="num">70</td>
- <td class="num">26</td>
- <td class="num">37.1%</td>
- <td class="num">0.68</td>
- </tr>
- <tr>
- <td>Unknown</td>
- <td class="num">10</td>
- <td class="num">1</td>
- <td class="num">10.0%</td>
- <td class="num" style="color: var(--muted)">Not assessed</td>
- </tr>
- <tr class="total-row">
- <td><strong>Total</strong></td>
- <td class="num-bold">500</td>
- <td class="num-bold">225</td>
- <td class="num-bold">45.0%</td>
- <td class="num"> </td>
- </tr>
- </tbody>
- </table>
- </div>
-
- <div class="table-section-label">Intersectional detail</div>
- <p style="font-size:16px; color: var(--muted); margin-bottom: 14px; line-height: 1.55;">The highest observed selection rate among the known intersectional groups is <strong>60.0% for White men</strong>. The figures below use that rate as the denominator for impact ratios.</p>
- <div class="table-scroll">
- <table>
- <thead>
- <tr>
- <th>Category</th>
- <th style="text-align:right">Evaluated</th>
- <th style="text-align:right">Selected</th>
- <th style="text-align:right">Selection rate</th>
- <th style="text-align:right">Impact ratio</th>
- </tr>
- </thead>
- <tbody>
- <tr>
- <td>White men</td>
- <td class="num">110</td>
- <td class="num">66</td>
- <td class="num">60.0%</td>
- <td class="num">1.00</td>
- </tr>
- <tr>
- <td>White women</td>
- <td class="num">90</td>
- <td class="num">44</td>
- <td class="num">48.9%</td>
- <td class="num">0.81</td>
- </tr>
- <tr>
- <td>Black men</td>
- <td class="num">60</td>
- <td class="num">30</td>
- <td class="num">50.0%</td>
- <td class="num">0.83</td>
- </tr>
- <tr>
- <td>Black women</td>
- <td class="num">60</td>
- <td class="num">18</td>
- <td class="num">30.0%</td>
- <td class="num">0.50</td>
- </tr>
- <tr>
- <td>Hispanic / Latino men</td>
- <td class="num">50</td>
- <td class="num">20</td>
- <td class="num">40.0%</td>
- <td class="num">0.67</td>
- </tr>
- <tr>
- <td>Hispanic / Latino women</td>
- <td class="num">50</td>
- <td class="num">20</td>
- <td class="num">40.0%</td>
- <td class="num">0.67</td>
- </tr>
- <tr>
- <td>Asian men</td>
- <td class="num">25</td>
- <td class="num">9</td>
- <td class="num">36.0%</td>
- <td class="num">0.60</td>
- </tr>
- <tr>
- <td>Asian women</td>
- <td class="num">45</td>
- <td class="num">17</td>
- <td class="num">37.8%</td>
- <td class="num">0.63</td>
- </tr>
- </tbody>
- </table>
- </div>
- <p class="table-caption">Ten records have unknown race/ethnicity (five men and five women), with one selection overall. These are retained in the population reconciliation and reported separately rather than silently discarded.</p>
-
- <div class="table-section-label" style="margin-top: 32px;">Findings that would require investigation</div>
- <ul class="work-findings-list">
- <li><span class="work-finding-label">Subgroup variation:</span> Several groups have materially lower observed selection rates than the highest-selection group; Black women have a 30.0% selection rate and a 0.50 impact ratio in the example.</li>
- <li><span class="work-finding-label">Decision-point definition:</span> Confirm that the binary outcome corresponds to the screening decision actually supported by the tool, not a later hiring decision influenced by unrelated stages.</li>
- <li><span class="work-finding-label">Data completeness:</span> Determine how demographic categories were collected, whether missing values are systematic and whether the data are suitable for the required audit.</li>
- <li><span class="work-finding-label">Statistical interpretation:</span> Inspect sample sizes and uncertainty. An impact ratio is a descriptive measure; it is not, by itself, proof of unlawful discrimination or of regulatory compliance.</li>
- <li><span class="work-finding-label">Reproducibility:</span> Retain the population definition, assessment period, data lineage, code or spreadsheet formulas, exclusions, model/version identification, and calculation checks.</li>
- </ul>
-
- <div class="table-section-label">Deliverable structure</div>
- <ol class="work-deliverable-list">
- <li><strong>Methodology memorandum:</strong> Tool and use-case description; coverage and legal-scope analysis; audited population; decision definition; data source; category rules; exclusions; calculation method.</li>
- <li><strong>Reproducible result tables:</strong> Counts, selection rates, impact ratios and intersectional analysis, including unknown categories.</li>
- <li><strong>Limitations and follow-up questions:</strong> Data coverage, missingness, sample sizes, decision thresholds and potential confounders.</li>
- <li><strong>Publication package:</strong> The information required for a public bias-audit summary, where the tool and its use fall within NYC Local Law 144, together with separate review of notice obligations.</li>
- </ol>
-
- <div class="work-summary">
- <p><strong>What the example demonstrates:</strong> A defensible technical assessment shows the denominators, methods, calculations and limits of inference not just a pass/fail badge.</p>
- </div>
- </div>
  </div>
 </div>
 

@@ -81,7 +81,7 @@ nav {
  list-style: none; margin-left: auto;
 }
 .nav-links a {
- font-size: 0.895rem; font-weight: 500; color: rgba(255,255,255,0.78);
+ font-size: 15px; font-weight: 500; color: rgba(255,255,255,0.78);
  text-decoration: none; padding: 0.35rem 0.65rem; border-radius: 4px;
  transition: color 0.15s, background 0.15s; white-space: nowrap;
 }
@@ -511,6 +511,7 @@ footer {
  <li><a href="ivo-capability.html">IVO</a></li>
  <li><a href="insights.html">Insights</a></li>
  <li><a href="contact.html" class="nav-cta">Let's Talk</a></li>
+ <li><a href="https://calendly.com/admeasurementpros/60min?hide_landing_page_details=1&hide_gdpr_banner=1&primary_color=c84b1e" class="nav-schedule" target="_blank" rel="noopener">Schedule a call</a></li>
  </ul>
 </nav>
 
@@ -778,6 +779,115 @@ footer {
  </p>
  <p class="quote-attr">John Smutniak · Managing Partner, MeasurementPros</p>
 </div>
+
+<!-- WORK EXAMPLE -->
+<section style="background:var(--surface,#fff);border-top:1px solid var(--rule,#ddd);border-bottom:1px solid var(--rule,#ddd);padding:80px 24px;" id="work-example">
+ <div style="max-width:1100px;margin:0 auto;">
+ <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--orange,#c84b1e);margin-bottom:14px;">Methods &amp; Evidence</div>
+ <h2 style="font-size:clamp(28px,3vw,38px);font-weight:800;color:var(--text-heading,#1a2540);letter-spacing:-0.03em;text-wrap:balance;margin-bottom:14px;">Work Example: Algorithmic bias audit</h2>
+ <p style="font-size:19px;color:var(--muted,#505d70);max-width:680px;line-height:1.65;margin-bottom:40px;">Selection-rate analysis for an automated screening tool. This example shows the denominators, methods, calculations and limits of inference that make an audit defensible.</p>
+
+ <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:36px;">
+ <div style="background:var(--light-bg,#f2efe9);border-radius:8px;padding:20px 22px;">
+ <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--orange,#c84b1e);margin-bottom:8px;">Scope</div>
+ <p style="font-size:17px;color:var(--text,#3c485b);line-height:1.6;">An automated screening tool used to rank applicants for further consideration and a set of <strong>500 application records</strong> with a binary selected / not-selected outcome.</p>
+ </div>
+ <div style="background:var(--light-bg,#f2efe9);border-radius:8px;padding:20px 22px;">
+ <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--orange,#c84b1e);margin-bottom:8px;">Audit question</div>
+ <p style="font-size:17px;color:var(--text,#3c485b);line-height:1.6;">Do selection outcomes differ by demographic category, and can the measures be reproduced from documented source data and a defined selection decision?</p>
+ </div>
+ </div>
+
+ <div style="font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--orange,#c84b1e);margin-bottom:10px;">Metric definitions</div>
+ <div style="background:var(--light-bg,#f2efe9);border-radius:8px;padding:18px 22px;margin-bottom:32px;">
+ <p style="font-size:17px;color:var(--text,#3c485b);margin-bottom:6px;"><strong>Selection rate</strong> = number selected &divide; number evaluated in the category.</p>
+ <p style="font-size:17px;color:var(--text,#3c485b);margin-bottom:6px;"><strong>Impact ratio</strong> = category selection rate &divide; highest selection rate in the relevant comparison.</p>
+ <p style="font-size:16px;color:var(--muted,#505d70);">Analyze sex, race/ethnicity and intersectional groups as applicable; separately account for missing/unknown data.</p>
+ </div>
+
+ <div style="font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--orange,#c84b1e);margin-bottom:10px;">By sex</div>
+ <div style="overflow-x:auto;margin-bottom:32px;">
+ <table style="width:100%;border-collapse:collapse;font-size:16px;">
+ <thead><tr style="border-bottom:2px solid var(--rule,#ddd);">
+ <th style="text-align:left;padding:10px 12px;color:var(--text-heading,#1a2540);font-weight:700;">Category</th>
+ <th style="text-align:right;padding:10px 12px;color:var(--text-heading,#1a2540);font-weight:700;">Evaluated</th>
+ <th style="text-align:right;padding:10px 12px;color:var(--text-heading,#1a2540);font-weight:700;">Selected</th>
+ <th style="text-align:right;padding:10px 12px;color:var(--text-heading,#1a2540);font-weight:700;">Selection rate</th>
+ <th style="text-align:right;padding:10px 12px;color:var(--text-heading,#1a2540);font-weight:700;">Impact ratio</th>
+ </tr></thead>
+ <tbody>
+ <tr style="border-bottom:1px solid var(--rule,#ddd);"><td style="padding:10px 12px;color:var(--text,#3c485b);">Men</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">250</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">125</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">50.0%</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">1.00</td></tr>
+ <tr style="border-bottom:1px solid var(--rule,#ddd);"><td style="padding:10px 12px;color:var(--text,#3c485b);">Women</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">250</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">100</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">40.0%</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">0.80</td></tr>
+ <tr style="font-weight:700;border-bottom:2px solid var(--rule,#ddd);"><td style="padding:10px 12px;color:var(--text-heading,#1a2540);">Total</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">500</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">225</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">45.0%</td><td style="text-align:right;padding:10px 12px;color:var(--muted,#505d70);"></td></tr>
+ </tbody></table>
+ </div>
+
+ <div style="font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--orange,#c84b1e);margin-bottom:10px;">By race / ethnicity</div>
+ <div style="overflow-x:auto;margin-bottom:32px;">
+ <table style="width:100%;border-collapse:collapse;font-size:16px;">
+ <thead><tr style="border-bottom:2px solid var(--rule,#ddd);">
+ <th style="text-align:left;padding:10px 12px;color:var(--text-heading,#1a2540);font-weight:700;">Category</th>
+ <th style="text-align:right;padding:10px 12px;color:var(--text-heading,#1a2540);font-weight:700;">Evaluated</th>
+ <th style="text-align:right;padding:10px 12px;color:var(--text-heading,#1a2540);font-weight:700;">Selected</th>
+ <th style="text-align:right;padding:10px 12px;color:var(--text-heading,#1a2540);font-weight:700;">Selection rate</th>
+ <th style="text-align:right;padding:10px 12px;color:var(--text-heading,#1a2540);font-weight:700;">Impact ratio</th>
+ </tr></thead>
+ <tbody>
+ <tr style="border-bottom:1px solid var(--rule,#ddd);"><td style="padding:10px 12px;color:var(--text,#3c485b);">White</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">200</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">110</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">55.0%</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">1.00</td></tr>
+ <tr style="border-bottom:1px solid var(--rule,#ddd);"><td style="padding:10px 12px;color:var(--text,#3c485b);">Black</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">120</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">48</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">40.0%</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">0.73</td></tr>
+ <tr style="border-bottom:1px solid var(--rule,#ddd);"><td style="padding:10px 12px;color:var(--text,#3c485b);">Hispanic / Latino</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">100</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">40</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">40.0%</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">0.73</td></tr>
+ <tr style="border-bottom:1px solid var(--rule,#ddd);"><td style="padding:10px 12px;color:var(--text,#3c485b);">Asian</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">70</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">26</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">37.1%</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">0.68</td></tr>
+ <tr style="border-bottom:1px solid var(--rule,#ddd);"><td style="padding:10px 12px;color:var(--text,#3c485b);">Unknown</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">10</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">1</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">10.0%</td><td style="text-align:right;padding:10px 12px;color:var(--muted,#505d70);">Not assessed</td></tr>
+ <tr style="font-weight:700;border-bottom:2px solid var(--rule,#ddd);"><td style="padding:10px 12px;color:var(--text-heading,#1a2540);">Total</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">500</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">225</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">45.0%</td><td style="text-align:right;padding:10px 12px;color:var(--muted,#505d70);"></td></tr>
+ </tbody></table>
+ </div>
+
+ <div style="font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--orange,#c84b1e);margin-bottom:10px;">Intersectional detail</div>
+ <p style="font-size:16px;color:var(--muted,#505d70);margin-bottom:14px;line-height:1.55;">The highest observed selection rate among the known intersectional groups is <strong>60.0% for White men</strong>. The figures below use that rate as the denominator for impact ratios.</p>
+ <div style="overflow-x:auto;margin-bottom:32px;">
+ <table style="width:100%;border-collapse:collapse;font-size:16px;">
+ <thead><tr style="border-bottom:2px solid var(--rule,#ddd);">
+ <th style="text-align:left;padding:10px 12px;color:var(--text-heading,#1a2540);font-weight:700;">Category</th>
+ <th style="text-align:right;padding:10px 12px;color:var(--text-heading,#1a2540);font-weight:700;">Evaluated</th>
+ <th style="text-align:right;padding:10px 12px;color:var(--text-heading,#1a2540);font-weight:700;">Selected</th>
+ <th style="text-align:right;padding:10px 12px;color:var(--text-heading,#1a2540);font-weight:700;">Selection rate</th>
+ <th style="text-align:right;padding:10px 12px;color:var(--text-heading,#1a2540);font-weight:700;">Impact ratio</th>
+ </tr></thead>
+ <tbody>
+ <tr style="border-bottom:1px solid var(--rule,#ddd);"><td style="padding:10px 12px;color:var(--text,#3c485b);">White men</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">110</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">66</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">60.0%</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">1.00</td></tr>
+ <tr style="border-bottom:1px solid var(--rule,#ddd);"><td style="padding:10px 12px;color:var(--text,#3c485b);">White women</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">90</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">44</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">48.9%</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">0.81</td></tr>
+ <tr style="border-bottom:1px solid var(--rule,#ddd);"><td style="padding:10px 12px;color:var(--text,#3c485b);">Black men</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">60</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">30</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">50.0%</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">0.83</td></tr>
+ <tr style="border-bottom:1px solid var(--rule,#ddd);"><td style="padding:10px 12px;color:var(--text,#3c485b);">Black women</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">60</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">18</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">30.0%</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">0.50</td></tr>
+ <tr style="border-bottom:1px solid var(--rule,#ddd);"><td style="padding:10px 12px;color:var(--text,#3c485b);">Hispanic / Latino men</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">50</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">20</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">40.0%</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">0.67</td></tr>
+ <tr style="border-bottom:1px solid var(--rule,#ddd);"><td style="padding:10px 12px;color:var(--text,#3c485b);">Hispanic / Latino women</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">50</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">20</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">40.0%</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">0.67</td></tr>
+ <tr style="border-bottom:1px solid var(--rule,#ddd);"><td style="padding:10px 12px;color:var(--text,#3c485b);">Asian men</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">25</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">9</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">36.0%</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">0.60</td></tr>
+ <tr style="border-bottom:1px solid var(--rule,#ddd);"><td style="padding:10px 12px;color:var(--text,#3c485b);">Asian women</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">45</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">17</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">37.8%</td><td style="text-align:right;padding:10px 12px;font-variant-numeric:tabular-nums;">0.63</td></tr>
+ </tbody></table>
+ </div>
+ <p style="font-size:16px;color:var(--muted,#505d70);margin-bottom:32px;line-height:1.55;">Ten records have unknown race/ethnicity (five men and five women), with one selection overall. These are retained in the population reconciliation and reported separately rather than silently discarded.</p>
+
+ <div style="font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--orange,#c84b1e);margin-top:32px;margin-bottom:12px;">Findings that would require investigation</div>
+ <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin-bottom:32px;">
+ <li style="font-size:17px;color:var(--text,#3c485b);line-height:1.6;"><strong>Subgroup variation:</strong> Several groups have materially lower observed selection rates than the highest-selection group; Black women have a 30.0% selection rate and a 0.50 impact ratio in the example.</li>
+ <li style="font-size:17px;color:var(--text,#3c485b);line-height:1.6;"><strong>Decision-point definition:</strong> Confirm that the binary outcome corresponds to the screening decision actually supported by the tool, not a later hiring decision influenced by unrelated stages.</li>
+ <li style="font-size:17px;color:var(--text,#3c485b);line-height:1.6;"><strong>Data completeness:</strong> Determine how demographic categories were collected, whether missing values are systematic and whether the data are suitable for the required audit.</li>
+ <li style="font-size:17px;color:var(--text,#3c485b);line-height:1.6;"><strong>Statistical interpretation:</strong> Inspect sample sizes and uncertainty. An impact ratio is a descriptive measure; it is not, by itself, proof of unlawful discrimination or of regulatory compliance.</li>
+ <li style="font-size:17px;color:var(--text,#3c485b);line-height:1.6;"><strong>Reproducibility:</strong> Retain the population definition, assessment period, data lineage, code or spreadsheet formulas, exclusions, model/version identification, and calculation checks.</li>
+ </ul>
+
+ <div style="font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--orange,#c84b1e);margin-bottom:12px;">Deliverable structure</div>
+ <ol style="padding-left:22px;display:flex;flex-direction:column;gap:10px;margin-bottom:32px;">
+ <li style="font-size:17px;color:var(--text,#3c485b);line-height:1.6;"><strong>Methodology memorandum:</strong> Tool and use-case description; coverage and legal-scope analysis; audited population; decision definition; data source; category rules; exclusions; calculation method.</li>
+ <li style="font-size:17px;color:var(--text,#3c485b);line-height:1.6;"><strong>Reproducible result tables:</strong> Counts, selection rates, impact ratios and intersectional analysis, including unknown categories.</li>
+ <li style="font-size:17px;color:var(--text,#3c485b);line-height:1.6;"><strong>Limitations and follow-up questions:</strong> Data coverage, missingness, sample sizes, decision thresholds and potential confounders.</li>
+ <li style="font-size:17px;color:var(--text,#3c485b);line-height:1.6;"><strong>Publication package:</strong> The information required for a public bias-audit summary, where the tool and its use fall within NYC Local Law 144, together with separate review of notice obligations.</li>
+ </ol>
+
+ <div style="background:var(--light-bg,#f2efe9);border-left:3px solid var(--orange,#c84b1e);border-radius:0 8px 8px 0;padding:20px 24px;">
+ <p style="font-size:17px;color:var(--text,#3c485b);line-height:1.65;"><strong>What the example demonstrates:</strong> A defensible technical assessment shows the denominators, methods, calculations and limits of inference not just a pass/fail badge.</p>
+ </div>
+ </div>
+</section>
 
 <!-- PROCESS -->
 <section class="process-section">
