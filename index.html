@@ -1,7 +1,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <title>MeasurementPros AI Governance, Compliance &amp; Auditing</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Barlow:wght@600;700&display=swap">
 
 <style>
 :root {
@@ -130,12 +131,15 @@ nav {
 .hero-detail { display: none; }
 }
 .hero-eyebrow {
- font-size: 12px;
+ font-size: 17px;
  font-weight: 700;
  letter-spacing: 0.14em;
  text-transform: uppercase;
  color: var(--orange);
  margin-bottom: 20px;
+ font-family: 'Barlow', sans-serif;
+ letter-spacing: 0.14em;
+ text-transform: uppercase;
 }
 .hero h1 {
  font-size: clamp(38px, 4vw, 52px);
@@ -225,8 +229,8 @@ nav {
 
 /* REGULATION STRIP */
 .reg-strip {
- background: var(--light-bg);
- border-bottom: 1px solid var(--rule);
+ background: var(--navy);
+ border-bottom: 1px solid rgba(255,255,255,0.1);
  padding: 16px 24px;
  display: flex;
  gap: 8px;
@@ -239,17 +243,20 @@ nav {
  font-weight: 700;
  letter-spacing: 0.1em;
  text-transform: uppercase;
- color: var(--muted);
+ color: rgba(255,255,255,0.5);
  margin-right: 4px;
 }
 .reg-pill {
- font-size: 13px;
- font-weight: 600;
- color: var(--navy);
- background: var(--card-bg);
- border: 1px solid var(--rule);
- border-radius: 20px;
- padding: 5px 13px;
+ font-size: 12px;
+ font-weight: 700;
+ letter-spacing: 0.08em;
+ text-transform: uppercase;
+ color: rgba(255,255,255,0.9);
+ background: transparent;
+ border: 1px solid rgba(255,255,255,0.35);
+ 
+ border-radius: 0;
+ padding: 8px 18px;
  white-space: nowrap;
 }
 @media (prefers-color-scheme: dark) {
@@ -267,12 +274,15 @@ nav {
 .section:last-of-type { border-bottom: none; }
 
 .section-eyebrow {
- font-size: 12px;
+ font-size: 16px;
  font-weight: 700;
  letter-spacing: 0.14em;
  text-transform: uppercase;
  color: var(--orange);
  margin-bottom: 14px;
+ font-family: 'Barlow', sans-serif;
+ letter-spacing: 0.14em;
+ text-transform: uppercase;
 }
 
 .section h2 {
@@ -304,7 +314,11 @@ nav {
  max-width: 1100px;
  margin: 0 auto;
 }
-.approach-strip.section-eyebrow { margin-bottom: 14px; }
+.approach-strip.section-eyebrow { margin-bottom: 14px;
+ font-family: 'Barlow', sans-serif;
+ letter-spacing: 0.14em;
+ text-transform: uppercase;
+}
 .approach-strip h2 {
  font-size: clamp(24px, 2.5vw, 34px);
  font-weight: 800;
@@ -371,7 +385,7 @@ nav {
 .principal-panel {
  background: var(--card-bg);
  border: 1px solid var(--rule);
- border-top: 3px solid var(--orange);
+ 
  border-radius: 8px;
  padding: 32px 28px;
  text-decoration: none;
@@ -382,7 +396,7 @@ nav {
  border-color: var(--orange);
  box-shadow: 0 4px 20px rgba(200,75,30,0.1);
 }
-.principal-panel:hover { border-top-color: var(--orange); }
+
 .panel-index {
  font-size: 11px;
  font-weight: 700;
@@ -536,12 +550,13 @@ nav {
 .audit-inner { grid-template-columns: 1fr; gap: 32px; }
 }
 .audit-eyebrow {
- font-size: 12px;
+ font-size: 13px;
  font-weight: 700;
  letter-spacing: 0.14em;
  text-transform: uppercase;
  color: var(--orange);
  margin-bottom: 14px;
+ font-family: 'Barlow', sans-serif;
 }
 .audit-inner h2 {
  font-size: clamp(26px, 2.5vw, 36px);
@@ -696,7 +711,11 @@ nav {
  max-width: 1100px;
  margin: 0 auto;
 }
-.work-examples-inner.section-eyebrow { margin-bottom: 14px; }
+.work-examples-inner.section-eyebrow { margin-bottom: 14px;
+ font-family: 'Barlow', sans-serif;
+ letter-spacing: 0.14em;
+ text-transform: uppercase;
+}
 .work-examples-inner > h2 {
  font-size: clamp(28px, 3vw, 38px);
  font-weight: 800;
@@ -730,12 +749,13 @@ nav {
 }
 .work-example:last-child { margin-bottom: 0; }
 .work-example-num {
- font-size: 11px;
+ font-size: 13px;
  font-weight: 700;
  letter-spacing: 0.12em;
  text-transform: uppercase;
  color: var(--orange);
  margin-bottom: 6px;
+ font-family: 'Barlow', sans-serif;
 }
 .work-example h3 {
  font-size: clamp(22px, 2.5vw, 32px);
@@ -746,7 +766,7 @@ nav {
  text-wrap: balance;
  margin-bottom: 24px;
  padding-top: 8px;
- border-top: 2px solid var(--orange);
+ 
 }
 .work-meta {
  background: var(--light-bg);
@@ -907,7 +927,7 @@ ol.work-deliverable-list { counter-reset: item; }
 
 .work-summary {
  background: var(--light-bg);
- border-left: 3px solid var(--orange);
+ 
  padding: 18px 22px;
  border-radius: 0 6px 6px 0;
  margin-top: 24px;
