@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>prEN 18283: What the EU's Draft Bias Standard Actually Requires | MeasurementPros</title>
+<meta name="description" content="The EU AI Act's draft standard on bias management is in working draft. Here's what prEN 18283 covers, what it will likely require under Article 10, and what organizations should be doing now.">
+<link rel="canonical" href="https://measurementpros.io/insights/pren-18283-bias-standard.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Barlow:wght@600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<style>
+:root {
+  --navy: #1a2540;
+  --orange: #c84b1e;
+  --orange-light: #d85c2c;
+  --bg: #fafaf8;
+  --surface: #ffffff;
+  --rule: #dddcd9;
+  --text: #3c485b;
+  --text-heading: #1a2540;
+  --muted: #505d70;
+  --light-bg: #f2efe9;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --navy: #dde4f0; --orange: #e06535;
+    --bg: #11141c; --surface: #1a1f2e; --rule: #2a3045;
+    --text: #b8c4d4; --text-heading: #dde4f0; --muted: #8090a8;
+    --light-bg: #161b28;
+  }
+}
+:root[data-theme="dark"] {
+  --navy: #dde4f0; --orange: #e06535;
+  --bg: #11141c; --surface: #1a1f2e; --rule: #2a3045;
+  --text: #b8c4d4; --text-heading: #dde4f0; --muted: #8090a8;
+  --light-bg: #161b28;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 19px; }
+body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; }
+
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--navy); padding: 0 2rem;
+  display: flex; align-items: center; gap: 2rem; height: 64px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.nav-logo { font-size: 1.1rem; font-weight: 700; color: #fff; text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+.nav-links { display: flex; align-items: center; gap: 0.15rem; list-style: none; margin-left: auto; }
+.nav-links a { font-size: 15px; font-weight: 500; color: rgba(255,255,255,0.78); text-decoration: none; padding: 0.35rem 0.65rem; border-radius: 4px; transition: color 0.15s, background 0.15s; white-space: nowrap; }
+.nav-links a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+.nav-cta { background: var(--orange) !important; color: #fff !important; border-radius: 5px !important; padding: 0.4rem 0.9rem !important; }
+.nav-cta:hover { background: var(--orange-light) !important; }
+
+.article-outer { max-width: 700px; margin: 0 auto; padding: 3.5rem 2rem 6rem; }
+
+.breadcrumb { font-size: 0.75rem; color: var(--muted); margin-bottom: 2.5rem; display: flex; align-items: center; gap: 0.4rem; }
+.breadcrumb a { color: var(--muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--orange); }
+
+.article-category {
+  font-family: 'Barlow', sans-serif;
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--orange); margin-bottom: 1rem;
+}
+
+h1 {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: clamp(1.75rem, 4.5vw, 2.6rem);
+  font-weight: 600; color: var(--text-heading);
+  line-height: 1.18; margin-bottom: 1.1rem;
+  text-wrap: balance;
+}
+
+.article-deck { font-size: 1.1rem; color: var(--muted); line-height: 1.65; margin-bottom: 1.75rem; }
+
+.byline {
+  display: flex; align-items: center; gap: 1rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 3rem;
+  font-size: 0.82rem; color: var(--muted);
+}
+.byline-author { font-weight: 600; color: var(--text-heading); }
+.byline-sep { color: var(--rule); }
+
+.article-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.05rem; line-height: 1.8; }
+.article-body p { margin-bottom: 1.5rem; color: var(--text); }
+.article-body strong { font-weight: 600; color: var(--text-heading); }
+
+.article-body h2 {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1.1rem; font-weight: 700;
+  color: var(--text-heading); line-height: 1.3;
+  margin: 3rem 0 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+}
+
+.callout {
+  background: var(--light-bg);
+  padding: 1.4rem 1.6rem; border-radius: 6px;
+  margin: 2.5rem 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.88rem; line-height: 1.7; color: var(--text);
+}
+.callout-label {
+  font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 0.6rem;
+}
+
+.related-cta {
+  margin-top: 4rem; padding-top: 2.5rem;
+  border-top: 2px solid var(--rule);
+}
+.related-cta-label {
+  font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 0.75rem;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+.related-cta h3 {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 1.3rem; font-weight: 600;
+  color: var(--text-heading); margin-bottom: 0.6rem; line-height: 1.3;
+}
+.related-cta p {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.9rem; line-height: 1.65;
+  color: var(--muted); margin-bottom: 1.25rem;
+}
+.related-cta a.cta-link {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.88rem; font-weight: 600;
+  color: var(--orange); text-decoration: none;
+}
+.related-cta a.cta-link:hover { text-decoration: underline; }
+
+.post-footer {
+  margin-top: 3rem; padding-top: 1.75rem;
+  border-top: 1px solid var(--rule);
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 1rem;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+.post-footer a { color: var(--orange); text-decoration: none; font-size: 0.85rem; font-weight: 600; }
+.post-footer a:hover { text-decoration: underline; }
+
+footer { background: #0e1220; color: rgba(255,255,255,0.6); padding: 3rem 2rem 2rem; margin-top: 4rem; }
+.footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1.5fr; gap: 3rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.footer-brand-name { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
+.footer-tagline { font-size: 0.8rem; color: rgba(255,255,255,0.45); line-height: 1.6; }
+.footer-col h4 { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 1rem; }
+.footer-col a { display: block; color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.85rem; margin-bottom: 0.5rem; }
+.footer-col a:hover { color: #fff; }
+.footer-address { font-size: 0.82rem; line-height: 1.7; color: rgba(255,255,255,0.5); }
+.footer-bottom { max-width: 1100px; margin: 1.5rem auto 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+.footer-bottom a { color: rgba(255,255,255,0.35); text-decoration: none; }
+
+@media (max-width: 768px) {
+  html { font-size: 17px; }
+  nav { padding: 0 1rem; }
+  .nav-links { display: none; }
+  .article-outer { padding: 2.5rem 1.25rem 4rem; }
+  .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .post-footer { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">Measurement<span style="display:inline-block;background:#c84b1e;color:#fff;padding:0 3px;margin:0 1px;border-radius:2px;">P</span>ros</a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../iso-42001.html">ISO 42001</a></li>
+    <li><a href="../eu-ai-act.html">EU AI Act</a></li>
+    <li><a href="../dora.html">DORA</a></li>
+    <li><a href="../bias-audits.html">Bias Audits</a></li>
+    <li><a href="../ivo-capability.html">IVO</a></li>
+    <li><a href="../insights.html">Insights</a></li>
+    <li><a href="../contact.html" class="nav-cta">Let's Talk</a></li>
+    <li><a href="https://calendly.com/admeasurementpros/60min?hide_landing_page_details=1&hide_gdpr_banner=1&primary_color=c84b1e" target="_blank" rel="noopener">Schedule a call</a></li>
+  </ul>
+</nav>
+
+<div class="article-outer">
+
+  <div class="breadcrumb">
+    <a href="../insights.html">Insights</a>
+    <span>›</span>
+    <span>EU AI Act</span>
+  </div>
+
+  <div class="article-category">EU AI Act</div>
+
+  <h1>prEN 18283 Is in Draft. Here's What the EU's Bias Standard Will Likely Require.</h1>
+
+  <p class="article-deck">The standard that operationalizes Article 10's bias requirements is still being written. What's in the working draft — and what organizations building bias audit programs should be doing now.</p>
+
+  <div class="byline">
+    <span class="byline-author">John Smutniak</span>
+    <span class="byline-sep">·</span>
+    <span>November 16, 2026</span>
+    <span class="byline-sep">·</span>
+    <span>6 min read</span>
+  </div>
+
+  <div class="article-body">
+
+    <p>
+      Most of the attention in EU AI Act compliance has focused on what is already published — EN 18286:2026 for quality management systems, the AI Act's own Annex requirements for high-risk systems. But the standard that will define how bias is actually measured and managed is still in working draft. prEN 18283, which covers concepts, measures and requirements for managing bias under Article 10(2)(f) and (g), is the one practitioners building bias audit programs need to track.
+    </p>
+
+    <p>
+      It has not been published. Its contents are not public. But its scope is clearly defined in CEN-CENELEC's work programme, and the requirements it will need to satisfy are already visible in the AI Act itself. What follows is a reading of what the standard will likely need to cover, based on the statutory text and the existing ISO/IEC work on bias that it will draw from.
+    </p>
+
+    <h2>What Article 10 actually asks for on bias</h2>
+
+    <p>
+      Article 10(2)(f) requires that training, validation and testing datasets be "examined in view of possible biases that could affect the health and safety or fundamental rights of persons." Article 10(2)(g) requires that "appropriate measures" be taken to detect, prevent and mitigate those biases. The Act does not define what "appropriate measures" means — that is exactly what prEN 18283 is being written to supply.
+    </p>
+
+    <p>
+      The statutory text points toward three distinct requirements that the standard will need to operationalize: a methodology for detecting bias in datasets and model outputs, a framework for deciding which biases are material enough to require treatment, and documentation requirements that allow an auditor to verify that the examination actually happened and that the measures taken were proportionate.
+    </p>
+
+    <div class="callout">
+      <div class="callout-label">Why this standard matters for audits</div>
+      Without a harmonized standard, "examined in view of possible biases" is an open question in a conformity assessment. Auditors can interpret it as meaning almost anything. Once prEN 18283 is cited in the Official Journal, it creates a presumption of conformity — meaning an organization that follows the standard can demonstrate Article 10 compliance without further argument. Before that citation happens, the standard is still the most credible reference available.
+    </div>
+
+    <h2>What the ISO/IEC base documents suggest</h2>
+
+    <p>
+      prEN 18283 will draw heavily on two existing ISO/IEC documents: ISO/IEC TR 24027, which covers bias in AI systems and AI-aided decision making, and ISO/IEC 20546, which defines statistical concepts used in AI bias measurement. These documents establish the vocabulary — protected characteristics, proxy variables, group fairness metrics, individual fairness — that the European standard will build on.
+    </p>
+
+    <p>
+      ISO/IEC TR 24027 identifies several categories of bias that occur at different stages of an AI system's lifecycle: cognitive bias in problem framing, historical bias in data collection, measurement bias in labeling, aggregation bias in model design, and deployment bias in how outputs are used. A standard written to satisfy Article 10 will need to cover at least the data-stage categories — historical, measurement and representation bias — since those are the ones that occur in training, validation and testing datasets specifically.
+    </p>
+
+    <p>
+      The more contested question is whether prEN 18283 will specify particular fairness metrics or leave metric selection to the organization. The AI Act's reference to "fundamental rights" suggests the standard will need to address protected characteristics under EU law — age, sex, racial or ethnic origin, religion, disability, sexual orientation — which immediately raises the question of whether disparate impact testing will be required, and against what reference population.
+    </p>
+
+    <h2>What organizations should be doing now</h2>
+
+    <p>
+      The standard is in working draft, which means it is at least one or two years from publication and citation. That is not an argument for waiting. Organizations that are building bias audit programs today, or preparing for EU AI Act conformity assessments on high-risk systems, should be doing two things.
+    </p>
+
+    <p>
+      First, build the documentation trail now. Article 10's examination requirement applies regardless of whether the standard is published. If a conformity assessment asks how you examined your training data for bias, "the standard wasn't published yet" is not a defense. The examination needs to happen and produce a record. What prEN 18283 will add is a specified methodology; the obligation to examine exists already.
+    </p>
+
+    <p>
+      Second, track the draft. CEN-CENELEC publishes its work programme and stage indicators. When prEN 18283 moves from working draft to enquiry stage, a draft will become available for national bodies to review. That is the point at which organizations can align their internal methodologies to the emerging requirements before the standard is finalized.
+    </p>
+
+    <h2>The relationship to NY Local Law 144 and California's AB 2930</h2>
+
+    <p>
+      Organizations operating under US bias audit requirements — New York City's Local Law 144 for automated employment decision tools, California's AB 2930 for consequential decision systems — are already doing some version of this work. The EU standard will likely be more demanding in its documentation requirements and in its treatment of protected characteristics under EU law rather than US anti-discrimination law. But the analytical core — identifying which protected groups are present in the data, testing for disparate impact, documenting what was done and why — is the same process. Organizations with a mature US bias audit program are better positioned to satisfy prEN 18283 when it arrives than those starting from scratch.
+    </p>
+
+    <div class="related-cta">
+      <div class="related-cta-label">From MeasurementPros</div>
+      <h3>Bias audit services</h3>
+      <p>We run bias audits against NY Local Law 144, California AB 2930, and EU AI Act Article 10 requirements. If you are building a bias audit program and want to know where it stands against the emerging EU standard, that is a conversation worth having now rather than after the standard is published.</p>
+      <a href="../bias-audits.html" class="cta-link">See our bias audit services →</a>
+    </div>
+
+  </div>
+
+  <div class="post-footer">
+    <a href="../insights.html">← Back to Insights</a>
+    <a href="../contact.html">Talk to us about bias audits →</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">Measurement<span style="display:inline-block;background:#c84b1e;color:#fff;padding:0 3px;margin:0 1px;border-radius:2px;">P</span>ros</div>
+      <p class="footer-tagline">ISO 42001 · EU AI Act · Bias Audits · IVO<br>Quantitative Language LLC</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="../iso-42001.html">ISO/IEC 42001</a>
+      <a href="../eu-ai-act.html">EU AI Act</a>
+      <a href="../bias-audits.html">Bias Audits (NY 144/CA)</a>
+      <a href="../ivo-capability.html">IVO Capability</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p class="footer-address">4576 Research Forest Dr Suite 200<br>The Woodlands TX 77381<br><br>600 Congress Ave · Austin TX 78701<br><br>Bratislava, Slovakia</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2020–2026 Quantitative Language LLC. The Woodlands · Austin · Bratislava. All rights reserved.</p>
+    <p><a href="../privacy-policy.html">Privacy Policy</a> · <a href="../terms.html">Terms</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
