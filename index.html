@@ -306,8 +306,8 @@ nav {
 /* ASSESSOR BLOCK */
 .assessor-section { padding: 72px 24px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
 .assessor-inner { max-width: 1100px; margin: 0 auto; }
-.assessor-eyebrow { font-family: 'Barlow', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 16px; }
-.assessor-headline { font-size: clamp(26px, 2.5vw, 36px); font-weight: 800; color: var(--text-heading); letter-spacing: -0.02em; line-height: 1.15; max-width: 720px; margin-bottom: 14px; text-wrap: balance; }
+.assessor-eyebrow { font-family: 'Barlow', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 14px; }
+.assessor-headline { font-size: clamp(28px, 3vw, 38px); font-weight: 800; color: var(--text-heading); letter-spacing: -0.025em; line-height: 1.2; max-width: 720px; margin-bottom: 18px; text-wrap: balance; }
 .assessor-subhead { font-size: 19px; color: var(--muted); max-width: 640px; line-height: 1.6; margin-bottom: 48px; }
 .assessor-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; }
 @media (max-width: 680px) { .assessor-cards { grid-template-columns: 1fr; gap: 24px; } }
@@ -316,8 +316,8 @@ nav {
 .assessor-card:hover .assessor-circle svg { stroke: #fff; }
 .assessor-circle { width: 64px; height: 64px; border-radius: 50%; border: 2px solid var(--rule); background: var(--surface); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.15s, border-color 0.15s; }
 .assessor-circle svg { width: 28px; height: 28px; stroke: var(--orange); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.15s; }
-.assessor-card-label { font-family: 'Barlow', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 2px; }
-.assessor-card-title { font-size: 20px; font-weight: 700; color: var(--text-heading); letter-spacing: -0.01em; margin-bottom: 6px; }
+.assessor-card-label { font-family: 'Barlow', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 4px; }
+.assessor-card-title { font-size: 24px; font-weight: 800; color: var(--text-heading); letter-spacing: -0.02em; margin-bottom: 8px; }
 .assessor-card-desc { font-size: 15px; color: var(--muted); line-height: 1.6; }
 .assessor-card-link { font-size: 14px; font-weight: 600; color: var(--orange); margin-top: 4px; display: block; }
 
@@ -1252,12 +1252,14 @@ footer a:hover { color: #fff; }
 <!-- ASSESSOR BLOCK -->
 <section class="assessor-section">
  <div class="assessor-inner">
-  <div class="assessor-eyebrow">Independent Assessment</div>
+  <div class="assessor-eyebrow">A new kind of assessor firm</div>
   <h2 class="assessor-headline">AI governance is evolving fast. We help you keep up.</h2>
   <p class="assessor-subhead">We're an assessor firm flexible enough to meet the challenges of rapidly evolving AI governance frameworks — from US state law to the EU AI Act.</p>
   <div class="assessor-cards">
    <a href="/ivo-capability.html" class="assessor-card">
-    <div class="assessor-circle"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+    <div class="assessor-circle">
+     <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+    </div>
     <div>
      <div class="assessor-card-label">US Frameworks</div>
      <div class="assessor-card-title">IVO Assessments</div>
@@ -1266,7 +1268,9 @@ footer a:hover { color: #fff; }
     </div>
    </a>
    <a href="/bias-audits.html" class="assessor-card">
-    <div class="assessor-circle"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 3v1m0 16v1M4.22 4.22l.7.7m12.16 12.16l.7.7M3 12h1m16 0h1M4.92 19.07l.7-.7M18.36 5.64l.7-.7"/></svg></div>
+    <div class="assessor-circle">
+     <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 3v1m0 16v1M4.22 4.22l.7.7m12.16 12.16l.7.7M3 12h1m16 0h1M4.92 19.07l.7-.7M18.36 5.64l.7-.7"/></svg>
+    </div>
     <div>
      <div class="assessor-card-label">Algorithmic Fairness</div>
      <div class="assessor-card-title">Bias Audits</div>
@@ -1275,7 +1279,9 @@ footer a:hover { color: #fff; }
     </div>
    </a>
    <a href="/eu-ai-act.html" class="assessor-card">
-    <div class="assessor-circle"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+    <div class="assessor-circle">
+     <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+    </div>
     <div>
      <div class="assessor-card-label">EU Regulation</div>
      <div class="assessor-card-title">EU AI Act</div>
